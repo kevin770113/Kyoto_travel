@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026 關西秋季之旅 11天10夜 行程規劃與追蹤</title>
+  <title>2026 關西秋季之旅 11天10夜 行程規劃與即時追蹤</title>
   <style>
     :root {
       --primary: #d9383a;
       --primary-dark: #b32024;
-      --secondary: #2b3a4a;
-      --accent: #d97736;
+      --primary-light: #fbebee;
+      --secondary: #1e293b;
+      --accent: #d97706;
+      --accent-light: #fef3c7;
       --bg: #f8fafc;
       --surface: #ffffff;
       --surface-subtle: #f1f5f9;
       --border: #e2e8f0;
-      --text-main: #1e293b;
+      --text-main: #0f172a;
       --text-muted: #64748b;
+      --text-light: #94a3b8;
       --success: #10b981;
       --success-bg: #ecfdf5;
       --warning: #f59e0b;
@@ -23,101 +26,647 @@
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 20px;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.03);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif; }
-    body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; padding-bottom: 60px; }
-    header { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: white; padding: 40px 20px 30px; position: relative; }
-    .container { max-width: 1050px; margin: 0 auto; padding: 0 16px; }
-    .badge-trip { display: inline-block; background: rgba(217, 56, 58, 0.2); border: 1px solid rgba(217, 56, 58, 0.4); color: #ff8a8c; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
-    h1 { font-size: 1.8rem; font-weight: 800; }
-    .hero-subtitle { color: #94a3b8; font-size: 0.95rem; margin-top: 4px; }
-    .hero-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-top: 24px; }
-    .stat-card { background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-md); padding: 12px 16px; }
-    .stat-label { color: #94a3b8; font-size: 0.75rem; font-weight: 500; }
-    .stat-value { color: #ffffff; font-size: 1.05rem; font-weight: 700; margin-top: 2px; }
-    .nav-tabs-wrapper { position: sticky; top: 0; background: rgba(248, 250, 252, 0.95); backdrop-filter: blur(12px); z-index: 100; border-bottom: 1px solid var(--border); padding: 10px 0; margin-bottom: 24px; }
-    .nav-tabs { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
-    .tab-btn { background: transparent; border: 1px solid transparent; padding: 8px 16px; border-radius: 30px; font-size: 0.9rem; font-weight: 600; color: var(--text-muted); cursor: pointer; white-space: nowrap; transition: all 0.2s; }
-    .tab-btn.active { background: var(--surface); color: var(--primary); border-color: var(--border); box-shadow: var(--shadow-sm); }
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
-    .day-selector { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 12px; margin-bottom: 20px; }
-    .day-btn { flex: 0 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 8px 14px; text-align: center; cursor: pointer; min-width: 80px; }
-    .day-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
-    .day-card { background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm); overflow: hidden; margin-bottom: 24px; }
-    .day-header { background: #f8fafc; border-bottom: 1px solid var(--border); padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; }
-    .city-tag { font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: 12px; margin-left: 8px; }
-    .city-tag.kyoto { background: #fef3c7; color: #92400e; }
-    .city-tag.osaka { background: #e0e7ff; color: #3730a3; }
-    .city-tag.usj { background: #fce7f3; color: #9d174d; }
-    .day-body { padding: 24px; }
-    .timeline { position: relative; padding-left: 28px; margin-bottom: 24px; }
-    .timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--border); }
-    .timeline-item { position: relative; margin-bottom: 20px; }
-    .timeline-item:last-child { margin-bottom: 0; }
-    .timeline-dot { position: absolute; left: -28px; top: 5px; width: 16px; height: 16px; border-radius: 50%; background: var(--surface); border: 3px solid var(--primary); }
-    .timeline-time { font-size: 0.8rem; font-weight: 700; color: var(--primary); }
-    .timeline-title { font-size: 1.05rem; font-weight: 700; }
-    .timeline-desc { font-size: 0.9rem; color: var(--text-muted); margin-top: 4px; }
-    .day-meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; background: var(--surface-subtle); border-radius: var(--radius-md); padding: 16px; }
-    .meta-box h4 { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px; }
-    .meta-box p { font-size: 0.9rem; color: var(--text-main); }
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm); }
-    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
-    .card-title { font-size: 1.15rem; font-weight: 700; color: var(--secondary); }
-    .badge-status { font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; }
-    .badge-status.pending { background: var(--warning-bg); color: var(--warning); border: 1px solid #fde68a; }
-    .flight-route { display: flex; align-items: center; justify-content: space-between; margin: 16px 0; padding: 12px 16px; background: var(--surface-subtle); border-radius: var(--radius-md); }
-    .flight-point { text-align: center; }
-    .flight-time { font-size: 1.3rem; font-weight: 800; }
-    .flight-code { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }
-    .flight-arrow { color: var(--primary); font-weight: 700; font-size: 0.9rem; text-align: center; }
-    .checklist-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 12px; border-radius: var(--radius-sm); }
-    .checklist-item:hover { background: var(--surface-subtle); }
-    .checklist-item input[type="checkbox"] { margin-top: 4px; width: 18px; height: 18px; accent-color: var(--primary); cursor: pointer; }
-    .checklist-title { font-size: 0.95rem; font-weight: 600; }
-    .checklist-desc { font-size: 0.8rem; color: var(--text-muted); }
-    .progress-bar-wrap { margin: 16px 0 24px; background: var(--surface-subtle); border-radius: 10px; height: 10px; overflow: hidden; }
-    .progress-bar { height: 100%; background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%); width: 25%; transition: width 0.3s; }
-    .usj-hero { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); color: white; border-radius: var(--radius-lg); padding: 28px; }
-    .usj-hero h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; }
-    .usj-tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
-    .usj-tip-card { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-md); padding: 16px; }
-    .usj-tip-title { font-weight: 700; font-size: 0.95rem; color: #fbbf24; margin-bottom: 6px; }
-    .usj-tip-desc { font-size: 0.85rem; color: #e0e7ff; }
-    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; }
-    th { background: var(--surface-subtle); color: var(--text-muted); font-weight: 700; padding: 12px 16px; border-bottom: 2px solid var(--border); }
-    td { padding: 14px 16px; border-bottom: 1px solid var(--border); }
-    .num-col { text-align: right; font-weight: 600; }
-    .tfoot-total td { font-weight: 800; font-size: 1rem; background: var(--surface-subtle); border-top: 2px solid var(--secondary); }
-    .action-banner { margin-top: 32px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: var(--radius-lg); padding: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .btn-sheet { background: #2563eb; color: white; text-decoration: none; padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; font-size: 0.9rem; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    /* Header & Hero */
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      color: white;
+      padding: 40px 20px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(217, 56, 58, 0.25) 0%, rgba(217, 56, 58, 0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .badge-trip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(217, 56, 58, 0.2);
+      border: 1px solid rgba(217, 56, 58, 0.4);
+      color: #ff8a8c;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-top: 6px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+    }
+
+    .stat-label {
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .stat-value {
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-top: 3px;
+    }
+
+    /* Navigation Tabs */
+    .nav-tabs-wrapper {
+      position: sticky;
+      top: 0;
+      background: rgba(248, 250, 252, 0.95);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+      margin-bottom: 24px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 4px;
+      scrollbar-width: none;
+    }
+
+    .nav-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: var(--surface-subtle);
+    }
+
+    .tab-btn.active {
+      background: var(--surface);
+      color: var(--primary);
+      border-color: var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tab Content Animation */
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.25s ease forwards;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Day Selector Carousel */
+    .day-selector {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      scrollbar-width: thin;
+    }
+
+    .day-btn {
+      flex: 0 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 8px 14px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      min-width: 82px;
+    }
+
+    .day-btn:hover {
+      border-color: var(--primary);
+    }
+
+    .day-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .day-btn .d-num {
+      font-size: 0.72rem;
+      font-weight: 700;
+      opacity: 0.85;
+      text-transform: uppercase;
+    }
+
+    .day-btn .d-date {
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    /* Day Cards */
+    .day-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    .day-header {
+      background: linear-gradient(to right, #f8fafc, #ffffff);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .day-title-group h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--secondary);
+    }
+
+    .city-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-left: 8px;
+    }
+
+    .city-tag.kyoto {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .city-tag.osaka {
+      background: #e0e7ff;
+      color: #3730a3;
+    }
+
+    .city-tag.usj {
+      background: #fce7f3;
+      color: #9d174d;
+    }
+
+    .day-body {
+      padding: 24px;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 24px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -28px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 3px solid var(--primary);
+    }
+
+    .timeline-time {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .timeline-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .timeline-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .day-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      background: var(--surface-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .meta-box h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-box p {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    /* Cards & Grids */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge-status {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+
+    .badge-status.pending {
+      background: var(--warning-bg);
+      color: var(--warning);
+      border: 1px solid #fde68a;
+    }
+
+    .badge-status.confirmed {
+      background: var(--success-bg);
+      color: var(--success);
+      border: 1px solid #a7f3d0;
+    }
+
+    /* Flight Card */
+    .flight-route {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 16px 0;
+      padding: 14px 16px;
+      background: var(--surface-subtle);
+      border-radius: var(--radius-md);
+    }
+
+    .flight-point {
+      text-align: center;
+    }
+
+    .flight-time {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .flight-code {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .flight-arrow {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Interactive Checklist */
+    .checklist-group {
+      margin-bottom: 10px;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      transition: background 0.15s;
+    }
+
+    .checklist-item:hover {
+      background: var(--surface-subtle);
+    }
+
+    .checklist-item input[type="checkbox"] {
+      margin-top: 4px;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--primary);
+      cursor: pointer;
+    }
+
+    .checklist-text {
+      flex: 1;
+    }
+
+    .checklist-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+    }
+
+    .checklist-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Progress bar */
+    .progress-bar-wrap {
+      margin: 16px 0 20px;
+      background: var(--surface-subtle);
+      border-radius: 10px;
+      height: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+      width: 25%;
+      border-radius: 10px;
+      transition: width 0.3s ease;
+    }
+
+    /* USJ Special Showcase */
+    .usj-hero {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .usj-hero h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .usj-hero p {
+      color: #c7d2fe;
+      font-size: 0.95rem;
+    }
+
+    .usj-tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .usj-tip-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .usj-tip-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fbbf24;
+      margin-bottom: 6px;
+    }
+
+    .usj-tip-desc {
+      font-size: 0.85rem;
+      color: #e0e7ff;
+      line-height: 1.5;
+    }
+
+    /* Budget Table */
+    .table-responsive {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    th {
+      background: var(--surface-subtle);
+      color: var(--text-muted);
+      font-weight: 700;
+      padding: 12px 16px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-main);
+    }
+
+    tr:hover td {
+      background: rgba(241, 245, 249, 0.5);
+    }
+
+    .num-col {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+    }
+
+    .tfoot-total td {
+      font-weight: 800;
+      font-size: 1rem;
+      background: var(--surface-subtle);
+      border-top: 2px solid var(--secondary);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 30px 16px 20px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      .day-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .day-meta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
     <div class="container">
-      <div class="badge-trip">🍁 2026 秋季關西・古都・樂園漫遊</div>
+      <div class="badge-trip">🍁 2026 秋季關西・京都大阪・樂園漫遊</div>
       <h1>京都・大阪 11 天 10 夜行程規劃與追蹤</h1>
       <div class="hero-subtitle">2026/09/29 (週二) ～ 2026/10/09 (週五) ｜ 中華航空 CI152 / CI153</div>
+
       <div class="hero-stats">
-        <div class="stat-card"><div class="stat-label">旅遊天數</div><div class="stat-value">11 天 10 夜</div></div>
-        <div class="stat-card"><div class="stat-label">重點主題</div><div class="stat-value">京都古都 + USJ環球</div></div>
-        <div class="stat-card"><div class="stat-label">住宿分段</div><div class="stat-value">京都4晚 + 大阪6晚</div></div>
-        <div class="stat-card"><div class="stat-label">USJ 日期</div><div class="stat-value">10/05 (週一)</div></div>
+        <div class="stat-card">
+          <div class="stat-label">旅遊天數</div>
+          <div class="stat-value">11 天 10 夜</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">重點主題</div>
+          <div class="stat-value">京都古都 + USJ環球</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">住宿分段</div>
+          <div class="stat-value">京都4晚 + 大阪6晚</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">USJ 日期</div>
+          <div class="stat-value">10/05 (週一)</div>
+        </div>
       </div>
     </div>
   </header>
 
+  <!-- Sticky Tabs Navigation -->
   <div class="nav-tabs-wrapper">
     <div class="container">
       <div class="nav-tabs">
-        <button class="tab-btn active" onclick="switchTab('itinerary', this)">📅 每日詳細行程</button>
+        <button class="tab-btn active" onclick="switchTab('itinerary', this)">📅 每日詳細行程 (D1-D11)</button>
         <button class="tab-btn" onclick="switchTab('booking', this)">✈️ 航班與住宿追蹤</button>
-        <button class="tab-btn" onclick="switchTab('usj', this)">🎢 環球影城專題</button>
+        <button class="tab-btn" onclick="switchTab('usj', this)">🎢 環球影城專題攻略</button>
         <button class="tab-btn" onclick="switchTab('checklist', this)">📋 行前待辦清單</button>
         <button class="tab-btn" onclick="switchTab('budget', this)">💰 預算與花費估算</button>
       </div>
@@ -125,38 +674,333 @@
   </div>
 
   <main class="container">
-    <!-- 每日行程 -->
+
+    <!-- Tab 1: 每日詳細行程 (Day 1 - Day 11) -->
     <section id="tab-itinerary" class="tab-content active">
+      
+      <!-- Day Selector Button Bar -->
       <div class="day-selector">
-        <div class="day-btn active" onclick="showDay(1, this)"><small>Day 1</small><br><b>9/29 二</b></div>
-        <div class="day-btn" onclick="showDay(2, this)"><small>Day 2</small><br><b>9/30 三</b></div>
-        <div class="day-btn" onclick="showDay(3, this)"><small>Day 3</small><br><b>10/1 四</b></div>
-        <div class="day-btn" onclick="showDay(4, this)"><small>Day 4</small><br><b>10/2 五</b></div>
-        <div class="day-btn" onclick="showDay(5, this)"><small>Day 5</small><br><b>10/3 六</b></div>
-        <div class="day-btn" onclick="showDay(6, this)"><small>Day 6</small><br><b>10/4 日</b></div>
-        <div class="day-btn" onclick="showDay(7, this)"><small>Day 7</small><br><b>10/5 一</b></div>
-        <div class="day-btn" onclick="showDay(8, this)"><small>Day 8</small><br><b>10/6 二</b></div>
-        <div class="day-btn" onclick="showDay(9, this)"><small>Day 9</small><br><b>10/7 三</b></div>
-        <div class="day-btn" onclick="showDay(10, this)"><small>Day 10</small><br><b>10/8 四</b></div>
-        <div class="day-btn" onclick="showDay(11, this)"><small>Day 11</small><br><b>10/9 五</b></div>
+        <div class="day-btn active" onclick="showDay(1, this)"><div class="d-num">Day 1</div><div class="d-date">9/29 二</div></div>
+        <div class="day-btn" onclick="showDay(2, this)"><div class="d-num">Day 2</div><div class="d-date">9/30 三</div></div>
+        <div class="day-btn" onclick="showDay(3, this)"><div class="d-num">Day 3</div><div class="d-date">10/1 四</div></div>
+        <div class="day-btn" onclick="showDay(4, this)"><div class="d-num">Day 4</div><div class="d-date">10/2 五</div></div>
+        <div class="day-btn" onclick="showDay(5, this)"><div class="d-num">Day 5</div><div class="d-date">10/3 六</div></div>
+        <div class="day-btn" onclick="showDay(6, this)"><div class="d-num">Day 6</div><div class="d-date">10/4 日</div></div>
+        <div class="day-btn" onclick="showDay(7, this)"><div class="d-num">Day 7</div><div class="d-date">10/5 一</div></div>
+        <div class="day-btn" onclick="showDay(8, this)"><div class="d-num">Day 8</div><div class="d-date">10/6 二</div></div>
+        <div class="day-btn" onclick="showDay(9, this)"><div class="d-num">Day 9</div><div class="d-date">10/7 三</div></div>
+        <div class="day-btn" onclick="showDay(10, this)"><div class="d-num">Day 10</div><div class="d-date">10/8 四</div></div>
+        <div class="day-btn" onclick="showDay(11, this)"><div class="d-num">Day 11</div><div class="d-date">10/9 五</div></div>
       </div>
 
       <!-- Day 1 -->
       <div class="day-card day-section" id="day-1">
         <div class="day-header">
-          <h3>Day 1：啟程抵達關西・直奔京都夜景 <span class="city-tag kyoto">京都</span></h3>
-          <span style="color: var(--text-muted); font-size: 0.85rem;">2026/09/29 (週二)</span>
+          <div class="day-title-group">
+            <h2>Day 1：啟程抵達關西・直奔京都夜景 <span class="city-tag kyoto">京都</span></h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">2026/09/29 (週二)</span>
+          </div>
         </div>
         <div class="day-body">
           <div class="timeline">
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-time">09:00 - 12:50</div><div class="timeline-title">搭乘華航 CI152（桃園 T2 ➔ 關西 T1）</div><div class="timeline-desc">入境提領行李，領取關空特急 Haruka 電子票。</div></div>
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-time">14:14 - 15:35</div><div class="timeline-title">搭乘關空特急 Haruka 直達京都站</div><div class="timeline-desc">約 75~80 分鐘直達京都，車廂舒適且有行李放置架。</div></div>
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-time">16:00 - 17:30</div><div class="timeline-title">京都飯店 Check-in 卸下行李</div><div class="timeline-desc">建議入住四條烏丸／河原町或京都車站周邊。</div></div>
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-time">18:00 - 21:00</div><div class="timeline-title">四條河原町・先斗町・鴨川散步與晚餐</div><div class="timeline-desc">漫步先斗町石板巷弄，品嚐道地京料理或居酒屋。</div></div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">09:00 - 12:50</div>
+              <div class="timeline-title">搭乘華航 CI152（桃園 T2 ➔ 關西 T1）</div>
+              <div class="timeline-desc">享受機上餐點與影音，12:50 抵達關西機場後辦理入境、提領行李並領取關空特急 Haruka 電子票。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">14:14 - 15:35</div>
+              <div class="timeline-title">搭乘關空特急 Haruka 直達京都站</div>
+              <div class="timeline-desc">約 75~80 分鐘直達京都，車廂舒適且設有專用大型行李架。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">16:00 - 17:30</div>
+              <div class="timeline-title">京都飯店 Check-in 卸下行李</div>
+              <div class="timeline-desc">建議入住四條烏丸／河原町周邊，地理位置便利，生活機能極佳。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">18:00 - 21:00</div>
+              <div class="timeline-title">四條河原町・先斗町石板街・鴨川漫步與晚餐</div>
+              <div class="timeline-desc">漫步於先斗町古樸石板巷弄，感受鴨川河畔悠閒氛圍，品嚐道地京料理或日式燒肉居酒屋。</div>
+            </div>
           </div>
           <div class="day-meta-grid">
-            <div class="meta-box"><h4>🍽️ 美食推薦</h4><p>先斗町居酒屋、弘燒肉 (四條木屋町店)</p></div>
-            <div class="meta-box"><h4>🚇 交通方案</h4><p>關空特急 Haruka + 京都市營地鐵/ICOCA</p></div>
+            <div class="meta-box">
+              <h4>🍽️ 美食推薦</h4>
+              <p>弘燒肉（四條木屋町店）、先斗町居酒屋、茶寮都路里抹茶甜品</p>
+            </div>
+            <div class="meta-box">
+              <h4>🚇 交通方案</h4>
+              <p>關空特急 Haruka 電子票 + 京都市營地鐵 / ICOCA</p>
+            </div>
+            <div class="meta-box">
+              <h4>💡 貼心提醒</h4>
+              <p>出發前請確認 Visit Japan Web QR Code 已截圖，入境通關更順暢。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="day-card day-section" id="day-2" style="display:none;">
+        <div class="day-header">
+          <div class="day-title-group">
+            <h2>Day 2：經典洛東巡禮・古寺石板街與祇園 <span class="city-tag kyoto">京都</span></h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">2026/09/30 (週三)</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">08:30 - 11:30</div>
+              <div class="timeline-title">清水寺・清水舞台・音羽之瀑祈泉</div>
+              <div class="timeline-desc">晨間早點出發避開旅行團人潮，參觀壯麗的木造清水舞台、仁王門，並於音羽之瀑祈求健康、學業或良緣。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">11:30 - 14:00</div>
+              <div class="timeline-title">產寧坂（三年坂）・二年坂漫步・古町家午餐</div>
+              <div class="timeline-desc">沿著保存完好的古町家石板坡道漫步，參觀特色茶屋與文創小店，享用道地湯豆腐或蕎麥麵定食。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">14:30 - 17:30</div>
+              <div class="timeline-title">八坂神社・圓山公園・花見小路（祇園）</div>
+              <div class="timeline-desc">走訪京都總鎮守八坂神社，傍晚穿梭於花見小路探尋傳統藝伎茶屋文化與古色古香的木造建築。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">18:00 - 20:30</div>
+              <div class="timeline-title">祇園白川夜景・精緻京料理晚餐</div>
+              <div class="timeline-desc">沿著白川南通欣賞垂柳與石板小橋流水夜景，享用精緻懷石料理或百年鰻魚飯。</div>
+            </div>
+          </div>
+          <div class="day-meta-grid">
+            <div class="meta-box">
+              <h4>🍽️ 美食推薦</h4>
+              <p>順正湯豆腐、奧丹清水、祇園鰻魚飯、鍵善良房黑糖葛切</p>
+            </div>
+            <div class="meta-box">
+              <h4>🚇 交通方案</h4>
+              <p>京都市營巴士 207 / 206 號或短程計程車接駁</p>
+            </div>
+            <div class="meta-box">
+              <h4>💡 貼心提醒</h4>
+              <p>二年坂・三年坂石階坡道較多，建議穿著防滑好走之健走鞋。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="day-card day-section" id="day-3" style="display:none;">
+        <div class="day-header">
+          <div class="day-title-group">
+            <h2>Day 3：千本鳥居之美・錦市場廚房・金閣舍利殿 <span class="city-tag kyoto">京都</span></h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">2026/10/01 (週四)</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">08:00 - 10:30</div>
+              <div class="timeline-title">伏見稻荷大社（清晨千本鳥居）</div>
+              <div class="timeline-desc">搭乘 JR 奈良線清晨抵達，享受朱紅鳥居隧道在晨光中的靜謐神秘美景，漫步至四辻展望台欣賞京都市景。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">11:30 - 14:00</div>
+              <div class="timeline-title">錦市場「京都的廚房」深度漫步午餐</div>
+              <div class="timeline-desc">品嚐豆乳甜甜圈、章魚燒、現烤海鮮、高湯玉子燒等百年生鮮與在地小吃。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">14:30 - 17:00</div>
+              <div class="timeline-title">金閣寺（鹿苑寺）或 二條城庭園</div>
+              <div class="timeline-desc">欣賞金碧輝煌的舍利殿在鏡湖池中的倒影，感受世界文化遺產的宏偉與禪意庭園美景。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">18:00 - 20:30</div>
+              <div class="timeline-title">新風館商場文創散策・日式天婦羅晚餐</div>
+              <div class="timeline-desc">造訪由隈研吾設計的紅磚歷史建築文創商場，享用酥脆天婦羅丼或日式洋食。</div>
+            </div>
+          </div>
+          <div class="day-meta-grid">
+            <div class="meta-box">
+              <h4>🍽️ 美食推薦</h4>
+              <p>錦市場三木雞卵玉子燒、こんなもんじゃ豆乳冰淇淋、祢ざめ家鰻魚飯</p>
+            </div>
+            <div class="meta-box">
+              <h4>🚇 交通方案</h4>
+              <p>JR 奈良線（京都 ⇄ 稻荷約 5 分）+ 京都市營地鐵 / 巴士</p>
+            </div>
+            <div class="meta-box">
+              <h4>💡 貼心提醒</h4>
+              <p>伏見稻荷若要登頂約需 2 小時，可依體力走到四辻折返，保留下午體力。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 4 -->
+      <div class="day-card day-section" id="day-4" style="display:none;">
+        <div class="day-header">
+          <div class="day-title-group">
+            <h2>Day 4：嵯峨野嵐山・竹林秘境與渡月橋畔 <span class="city-tag kyoto">京都</span></h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">2026/10/02 (週五)</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">09:00 - 10:30</div>
+              <div class="timeline-title">嵯峨野觀光小火車（Torokko 復古鐵道）</div>
+              <div class="timeline-desc">沿著保津川溪谷行駛，欣賞初秋山林峽谷清幽風光與溪流景色。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">10:30 - 13:00</div>
+              <div class="timeline-title">嵐山竹林小徑・野宮神社・天龍寺庭園</div>
+              <div class="timeline-desc">漫步翠綠高聳的竹林隧道，參拜祈求良緣的野宮神社，參觀世界遺產天龍寺曹源池庭園。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">13:30 - 16:30</div>
+              <div class="timeline-title">渡月橋散策・嵐山大街・% Arabica 咖啡・嵐電足湯</div>
+              <div class="timeline-desc">在渡月橋畔欣賞桂川風光，品嚐排隊名店 % Arabica 咖啡，最後在嵐電嵐山站享受愜意溫泉足湯。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">18:00 - 20:30</div>
+              <div class="timeline-title">返回京都烏丸・京風鍋物晚餐・整理行李</div>
+              <div class="timeline-desc">享用暖心京風涮涮鍋或湯葉料理，回飯店提早整理行囊，準備明日移動至大阪。</div>
+            </div>
+          </div>
+          <div class="day-meta-grid">
+            <div class="meta-box">
+              <h4>🍽️ 美食推薦</h4>
+              <p>% Arabica Kyoto Arashiyama、廣川鰻魚飯（需提早預約）、中村屋可樂餅</p>
+            </div>
+            <div class="meta-box">
+              <h4>🚇 交通方案</h4>
+              <p>JR 嵯峨野線（京都 ⇄ 嵯峨嵐山約 17 分）/ 京福電鐵（嵐電）</p>
+            </div>
+            <div class="meta-box">
+              <h4>💡 貼心提醒</h4>
+              <p>嵯峨野小火車車票建議提前 1 個月於線上預約第 5 節開放式車廂。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="day-card day-section" id="day-5" style="display:none;">
+        <div class="day-header">
+          <div class="day-title-group">
+            <h2>Day 5：宇治茶香文化 ➔ 移動進駐大阪・道頓堀夜景 <span class="city-tag osaka">大阪</span></h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">2026/10/03 (週六)</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">09:30 - 12:30</div>
+              <div class="timeline-title">宇治平等院鳳凰堂・宇治神社古風散策</div>
+              <div class="timeline-desc">京都飯店退房後（行李寄放或隨行），前往宇治參觀日幣十圓硬幣上的千年國寶鳳凰堂與宇治川風光。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">12:30 - 14:30</div>
+              <div class="timeline-title">中村藤吉平等院店 享用頂級抹茶午餐與甜點</div>
+              <div class="timeline-desc">品嚐招牌宇治抹茶生茶凍、抹茶蕎麥麵定食與特製抹茶聖代。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">15:00 - 16:30</div>
+              <div class="timeline-title">移動至大阪・大阪飯店 Check-in 卸行李</div>
+              <div class="timeline-desc">搭乘京阪電車或 JR 抵達大阪，入住難波／心齋橋商圈飯店（連續入住 6 晚）。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">17:30 - 21:30</div>
+              <div class="timeline-title">心齋橋・道頓堀霓虹夜景・固力果跑跑人合影</div>
+              <div class="timeline-desc">沉浸在大阪最熱鬧繁華的購物商圈，品嚐大阪燒、現烤章魚燒與美味拉麵。</div>
+            </div>
+          </div>
+          <div class="day-meta-grid">
+            <div class="meta-box">
+              <h4>🍽️ 美食推薦</h4>
+              <p>中村藤吉抹茶、美津の大阪燒、十八番章魚燒、元祖串炸達摩</p>
+            </div>
+            <div class="meta-box">
+              <h4>🚇 交通方案</h4>
+              <p>JR 奈良線 + 京阪本線 / 大阪地鐵御堂筋線</p>
+            </div>
+            <div class="meta-box">
+              <h4>💡 貼心提醒</h4>
+              <p>城市轉換移動日，可善用車站置物櫃或飯店行李直送服務輕鬆漫遊。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 6 -->
+      <div class="day-card day-section" id="day-6" style="display:none;">
+        <div class="day-header">
+          <div class="day-title-group">
+            <h2>Day 6：大阪城堡地標・新世界懷舊下町・梅田夜景 <span class="city-tag osaka">大阪</span></h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">2026/10/04 (週日)</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">09:30 - 12:00</div>
+              <div class="timeline-title">大阪城公園・登天守閣俯瞰市區全景</div>
+              <div class="timeline-desc">登上天守閣欣賞大阪市區壯闊全景，參觀豐臣秀吉與戰國歷史文物展示。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">12:30 - 15:30</div>
+              <div class="timeline-title">新世界商圈・通天閣（體驗巨型溜滑梯）・吃元祖炸串</div>
+              <div class="timeline-desc">體驗濃濃昭和懷舊感的大阪下町風情，體驗通天閣 Tower Slider 溜滑梯，品嚐香酥不膩的元祖炸串。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">16:30 - 18:30</div>
+              <div class="timeline-title">梅田大型商圈（Grand Front Osaka / 阪急百貨）</div>
+              <div class="timeline-desc">享受關西最大購物核心商場，採購精緻伴手禮與日系生活選物。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">18:30 - 21:00</div>
+              <div class="timeline-title">梅田藍天大廈空中庭園・欣賞絕美 360 度百萬夜景</div>
+              <div class="timeline-desc">登上戶外露天展望台，將大阪繁華天際線盡收眼底，晚餐品嚐道地大阪燒名店。</div>
+            </div>
+          </div>
+          <div class="day-meta-grid">
+            <div class="meta-box">
+              <h4>🍽️ 美食推薦</h4>
+              <p>八重勝串炸 / 元祖串炸達摩、きじ木地大阪燒（梅田藍天店）</p>
+            </div>
+            <div class="meta-box">
+              <h4>🚇 交通方案</h4>
+              <p>Osaka Metro 大阪地鐵一日券</p>
+            </div>
+            <div class="meta-box">
+              <h4>💡 貼心提醒</h4>
+              <p>明日為 USJ 全日極限挑戰，今晚建議早點回飯店休息補足體能！</p>
+            </div>
           </div>
         </div>
       </div>
@@ -164,120 +1008,590 @@
       <!-- Day 7 (USJ) -->
       <div class="day-card day-section" id="day-7" style="display:none;">
         <div class="day-header">
-          <h3>Day 7：日本環球影城（USJ）全日極限暢遊 🌟 <span class="city-tag usj">USJ 環球影城</span></h3>
-          <span style="color: var(--text-muted); font-size: 0.85rem;">2026/10/05 (週一)</span>
+          <div class="day-title-group">
+            <h2>Day 7：日本環球影城（USJ）全日極限暢遊 🌟 <span class="city-tag usj">USJ 環球影城</span></h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">2026/10/05 (週一)</span>
+          </div>
         </div>
         <div class="day-body">
           <div class="timeline">
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-time">07:00 - 08:00</div><div class="timeline-title">出發提早抵達 USJ 門口排隊入園</div><div class="timeline-desc">通常提早 30-45 分鐘開門，提早抵達搶第一波入園。</div></div>
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-time">08:30 - 12:00</div><div class="timeline-title">超級任天堂世界（瑪利歐賽車、咚奇剛新園區）</div><div class="timeline-desc">佩戴能量手環敲金幣，挑戰庫巴城堡賽車。</div></div>
-            <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-time">13:00 - 17:00</div><div class="timeline-title">哈利波特魔法世界・小小兵樂園・飛天翼龍</div><div class="timeline-desc">禁忌之旅沉浸式飛行，挑戰刺激飛天翼龍。</div></div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">07:00 - 08:00</div>
+              <div class="timeline-title">出發提早抵達 USJ 門口排隊入園</div>
+              <div class="timeline-desc">環球影城常比表定時間提早 30-45 分鐘開門，提早抵達可搶第一波無等待體驗。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">08:30 - 12:00</div>
+              <div class="timeline-title">超級任天堂世界（瑪利歐賽車、耀西冒險、咚奇剛新園區）</div>
+              <div class="timeline-desc">佩戴能量手環敲磚塊金幣，挑戰庫巴城堡的 AR 瑪利歐賽車與全新擴建的咚奇剛瘋狂礦車！</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">12:30 - 14:00</div>
+              <div class="timeline-title">奇諾比奧咖啡店 蘑菇主題精緻午餐</div>
+              <div class="timeline-desc">品嚐超級蘑菇披薩碗、無敵星星飯、磚塊提拉米蘇甜點並打卡拍照。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">14:00 - 17:30</div>
+              <div class="timeline-title">哈利波特魔法世界・小小兵樂園・飛天翼龍</div>
+              <div class="timeline-desc">喝冰涼奶油啤酒、體驗禁忌之旅 4K 沉浸式飛行，挑戰侏儸紀公園驚險刺激的飛天翼龍。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">18:30 - 21:00</div>
+              <div class="timeline-title">霍格華茲城堡夜間燈光・周邊大採購・返程晚餐</div>
+              <div class="timeline-desc">在霍格華茲城堡夜景下合影，買齊限定爆米花桶與周邊紀念品。</div>
+            </div>
           </div>
           <div class="day-meta-grid">
-            <div class="meta-box"><h4>🍽️ 美食推薦</h4><p>奇諾比奧咖啡店、三根掃帚奶油啤酒</p></div>
-            <div class="meta-box"><h4>🚇 交通方案</h4><p>JR 環狀線 ➔ 西九條轉 JR 夢咲線 ➔ 環球影城站</p></div>
+            <div class="meta-box">
+              <h4>🍽️ 美食推薦</h4>
+              <p>奇諾比奧咖啡店、三根掃帚奶油啤酒、小小兵爆米花桶</p>
+            </div>
+            <div class="meta-box">
+              <h4>🚇 交通方案</h4>
+              <p>JR 大阪環狀線 ➔ 西九條站轉 JR 夢咲線 ➔ 環球影城站</p>
+            </div>
+            <div class="meta-box">
+              <h4>💡 搶票提醒</h4>
+              <p>務必在入園前 2 個月（約 8 月初）線上搶購 Express Pass 快速通關券！</p>
+            </div>
           </div>
         </div>
       </div>
-      <!-- 其餘日次依此類推完整呈現在頁面中 -->
+
+      <!-- Day 8 -->
+      <div class="day-card day-section" id="day-8" style="display:none;">
+        <div class="day-header">
+          <div class="day-title-group">
+            <h2>Day 8：海遊館療癒鯨鯊・黑門市場生鮮・難波八阪巨獅 <span class="city-tag osaka">大阪</span></h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">2026/10/06 (週二)</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">09:30 - 12:00</div>
+              <div class="timeline-title">大阪海遊館（Kaiyukan）＆ 天保山大摩天輪</div>
+              <div class="timeline-desc">世界規模最大水族館之一，沿著螺旋迴廊近距離觀賞巨大鯨鯊、魟魚與企鵝餵食秀。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">12:30 - 14:30</div>
+              <div class="timeline-title">黑門市場生猛海鮮午餐大快朵頤</div>
+              <div class="timeline-desc">現剖海膽、黑鮪魚大腹握壽司、A5 和牛現烤串燒與新鮮烤生蠔。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">15:00 - 17:00</div>
+              <div class="timeline-title">難波八阪神社（巨型獅子殿開運祈福）</div>
+              <div class="timeline-desc">造訪極具視覺震撼的巨大獅子頭舞台，象徵把厄運吸走、招來勝利好運。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">17:30 - 20:30</div>
+              <div class="timeline-title">千日前道具街散策・元祖老店咖哩晚餐</div>
+              <div class="timeline-desc">逛逛日本特色廚房器具與擬真食物模型，晚餐品嚐自由軒百年名物生蛋咖哩。</div>
+            </div>
+          </div>
+          <div class="day-meta-grid">
+            <div class="meta-box">
+              <h4>🍽️ 美食推薦</h4>
+              <p>黑門三平海鮮刺身、丸善食肉店烤和牛、自由軒名物生蛋咖哩</p>
+            </div>
+            <div class="meta-box">
+              <h4>🚇 交通方案</h4>
+              <p>Osaka Metro 地鐵中央線 + 千日前線 / 御堂筋線</p>
+            </div>
+            <div class="meta-box">
+              <h4>💡 貼心提醒</h4>
+              <p>海遊館門票建議先於網路預約時段，省去現場排隊購票時間。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 9 -->
+      <div class="day-card day-section" id="day-9" style="display:none;">
+        <div class="day-header">
+          <div class="day-title-group">
+            <h2>Day 9：古都奈良一日漫遊・東大寺大佛與親近萌鹿 <span class="city-tag osaka">奈良近郊</span></h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">2026/10/07 (週三)</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">09:00 - 10:00</div>
+              <div class="timeline-title">搭乘近鐵快速急行（大阪難波 ➔ 近鐵奈良）</div>
+              <div class="timeline-desc">約 35~40 分鐘即可直達奈良，出站後步行即達商店街與奈良公園。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">10:00 - 12:30</div>
+              <div class="timeline-title">奈良公園餵鹿・世界最大木造建築「東大寺」</div>
+              <div class="timeline-desc">購買鹿仙貝與親切小鹿互動合影，瞻仰巍峨震撼的盧舍那大佛。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">13:00 - 14:30</div>
+              <div class="timeline-title">奈良町老街午餐・中谷堂現搗麻糬</div>
+              <div class="timeline-desc">品嚐熱騰騰志津香七轉釜飯，觀賞中谷堂高速搗麻糬表演並品嚐現做艾草麻糬。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">14:30 - 16:30</div>
+              <div class="timeline-title">春日大社・萬葉植物園散策</div>
+              <div class="timeline-desc">漫步於綠意古杉林與三千座石燈籠之間，感受清幽古都氛圍。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">18:00 - 20:30</div>
+              <div class="timeline-title">返回大阪難波・頂級國產牛燒肉大餐</div>
+              <div class="timeline-desc">犒賞一整天充實的步行，享受油脂豐富入口即化的高品質燒肉吃到飽。</div>
+            </div>
+          </div>
+          <div class="day-meta-grid">
+            <div class="meta-box">
+              <h4>🍽️ 美食推薦</h4>
+              <p>志津香釜飯、中谷堂現搗麻糬、難波 國產牛燒肉放題 (あぶりや)</p>
+            </div>
+            <div class="meta-box">
+              <h4>🚇 交通方案</h4>
+              <p>近鐵電車單程票 / 奈良・斑鳩一日券</p>
+            </div>
+            <div class="meta-box">
+              <h4>💡 貼心提醒</h4>
+              <p>餵鹿時手中仙貝不要一次全部亮出，避免被熱情小鹿圍繞搶食喔！</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 10 -->
+      <div class="day-card day-section" id="day-10" style="display:none;">
+        <div class="day-header">
+          <div class="day-title-group">
+            <h2>Day 10：中崎町文青老屋・梅田百貨・橘子街潮流掃貨 <span class="city-tag osaka">大阪</span></h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">2026/10/08 (週四)</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">10:00 - 12:30</div>
+              <div class="timeline-title">中崎町（Nakazakicho）昭和老屋文青咖啡街</div>
+              <div class="timeline-desc">穿梭在二戰倖存的昭和長屋巷弄，探訪特色雜貨、手作選物店與精品手沖咖啡。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">12:30 - 15:30</div>
+              <div class="timeline-title">梅田大型商圈購物（LUCUA / 阪急百貨）</div>
+              <div class="timeline-desc">享受關西最大購物中心，採購精緻伴手禮、日系服飾與保養品。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">16:00 - 19:00</div>
+              <div class="timeline-title">南堀江橘子街（Orange Street）潮流服飾散策</div>
+              <div class="timeline-desc">匯集 Supreme、BAPE、古著店與美式復古傢俱的時尚核心地帶。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">19:30 - 22:00</div>
+              <div class="timeline-title">大國藥妝/唐吉訶德最後補貨・行李打包整理</div>
+              <div class="timeline-desc">進行免稅藥妝與零食最後採購，回飯店秤重並整理 11 天滿滿的戰利品。</div>
+            </div>
+          </div>
+          <div class="day-meta-grid">
+            <div class="meta-box">
+              <h4>🍽️ 美食推薦</h4>
+              <p>HARBS 水果千層蛋糕、利久牛舌（梅田店）、一蘭拉麵</p>
+            </div>
+            <div class="meta-box">
+              <h4>🚇 交通方案</h4>
+              <p>Osaka Metro 地鐵御堂筋線 / 谷町線</p>
+            </div>
+            <div class="meta-box">
+              <h4>💡 貼心提醒</h4>
+              <p>將液體類商品全部放入託運行李，免稅商品密封袋不可在境內拆封。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 11 -->
+      <div class="day-card day-section" id="day-11" style="display:none;">
+        <div class="day-header">
+          <div class="day-title-group">
+            <h2>Day 11：滿載回憶・關西機場出境順利返台 <span class="city-tag osaka">返台</span></h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">2026/10/09 (週五)</span>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">09:30 - 10:30</div>
+              <div class="timeline-title">飯店退房・前往南海難波站</div>
+              <div class="timeline-desc">悠閒享用早餐後退房，步行前往難波站搭乘南海電鐵特急 Rapi:t。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">10:30 - 11:15</div>
+              <div class="timeline-title">搭乘南海電鐵特急 Rapi:t 直達關西機場</div>
+              <div class="timeline-desc">約 38 分鐘直達關西國際機場第一航廈（T1）。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">11:30 - 13:30</div>
+              <div class="timeline-title">華航櫃台報到託運・機場免稅店最後採買</div>
+              <div class="timeline-desc">起飛前 2.5 小時完成行李託運，採購白色戀人、Royce 生巧克力、東京芭娜娜等伴手禮。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-time">14:00 - 16:00</div>
+              <div class="timeline-title">搭乘華航 CI153 起飛・平安降落桃園機場 T2</div>
+              <div class="timeline-desc">平安抵達台灣，結束 11 天精彩難忘的關西秋日之旅！</div>
+            </div>
+          </div>
+          <div class="day-meta-grid">
+            <div class="meta-box">
+              <h4>🍽️ 機場美食</h4>
+              <p>關西機場出境美食街、神座拉麵、星巴克限定杯</p>
+            </div>
+            <div class="meta-box">
+              <h4>🚇 交通方案</h4>
+              <p>南海電鐵特急 Rapi:t 指定席</p>
+            </div>
+            <div class="meta-box">
+              <h4>💡 貼心提醒</h4>
+              <p>華航 CI153 表定 14:00 起飛，請務必於 13:20 前抵達登機門登機。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
-    <!-- 航班與住宿 -->
+    <!-- Tab 2: 航班與住宿 (Booking) -->
     <section id="tab-booking" class="tab-content">
       <div class="grid-2">
+        
+        <!-- Flight Card -->
         <div class="card">
-          <div class="card-header"><div class="card-title">✈️ 航班規劃與狀態</div><span class="badge-status pending">機票暫定・待付款</span></div>
-          <div class="flight-route">
-            <div class="flight-point"><div class="flight-time">09:00</div><div class="flight-code">TPE 桃園 T2</div></div>
-            <div class="flight-arrow">華航 CI152 (2h50m)<br>➔</div>
-            <div class="flight-point"><div class="flight-time">12:50</div><div class="flight-code">KIX 關西 T1</div></div>
+          <div class="card-header">
+            <div class="card-title">✈️ 航班規劃與狀態</div>
+            <span class="badge-status pending">機票暫定・待付款</span>
           </div>
+          
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">去程航班（11天前段）</div>
           <div class="flight-route">
-            <div class="flight-point"><div class="flight-time">14:00</div><div class="flight-code">KIX 關西 T1</div></div>
-            <div class="flight-arrow">華航 CI153 (3h00m)<br>➔</div>
-            <div class="flight-point"><div class="flight-time">16:00</div><div class="flight-code">TPE 桃園 T2</div></div>
+            <div class="flight-point">
+              <div class="flight-time">09:00</div>
+              <div class="flight-code">TPE 桃園 T2</div>
+            </div>
+            <div class="flight-arrow">
+              <span>中華航空 CI152</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">2h 50m (A330-300)</span>
+              <span>➔</span>
+            </div>
+            <div class="flight-point">
+              <div class="flight-time">12:50</div>
+              <div class="flight-code">KIX 關西 T1</div>
+            </div>
+          </div>
+
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin: 16px 0 8px;">回程航班（11天尾段）</div>
+          <div class="flight-route">
+            <div class="flight-point">
+              <div class="flight-time">14:00</div>
+              <div class="flight-code">KIX 關西 T1</div>
+            </div>
+            <div class="flight-arrow">
+              <span>中華航空 CI153</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">3h 00m (A330-300)</span>
+              <span>➔</span>
+            </div>
+            <div class="flight-point">
+              <div class="flight-time">16:00</div>
+              <div class="flight-code">TPE 桃園 T2</div>
+            </div>
+          </div>
+
+          <div style="font-size: 0.85rem; color: var(--text-muted); background: var(--surface-subtle); padding: 10px; border-radius: var(--radius-sm);">
+            💡 建議：確認行程後即可付款開票，並選取偏好的座位。
           </div>
         </div>
+
+        <!-- Hotel Card -->
         <div class="card">
-          <div class="card-header"><div class="card-title">🏨 住宿分段規劃</div><span class="badge-status pending">待預訂</span></div>
-          <p><b>📍 京都 4 晚 (9/29 - 10/3)：</b>四條烏丸／河原町周邊</p>
-          <hr style="margin:12px 0; border:0; border-top:1px solid var(--border);">
-          <p><b>📍 大阪 6 晚 (10/3 - 10/9)：</b>難波／心齋橋或梅田商圈</p>
+          <div class="card-header">
+            <div class="card-title">🏨 住宿分段與建議</div>
+            <span class="badge-status pending">待預訂</span>
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong style="color: var(--secondary);">📍 第一段：京都 (4 晚)</strong>
+              <span style="font-size: 0.8rem; color: var(--accent); font-weight: 700;">9/29 - 10/3</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">
+              <strong>首選區域：</strong>四條烏丸／河原町 或 京都車站周邊<br>
+              <strong>推薦飯店：</strong>三井花園飯店京都河原町淨教寺、Cross Hotel Kyoto、京都千飯店 (THE THOUSAND KYOTO)
+            </p>
+          </div>
+
+          <hr style="border: 0; border-top: 1px solid var(--border); margin: 14px 0;">
+
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong style="color: var(--secondary);">📍 第二段：大阪 (6 晚)</strong>
+              <span style="font-size: 0.8rem; color: var(--accent); font-weight: 700;">10/3 - 10/9</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">
+              <strong>首選區域：</strong>難波／心齋橋 或 梅田商圈<br>
+              <strong>推薦飯店：</strong>大阪南海瑞士飯店 (Swissotel Nankai)、大阪十字飯店 (Cross Hotel Osaka)、日航酒店心齋橋
+            </p>
+          </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- 環球影城專題 -->
+    <!-- Tab 3: USJ 環球影城專題 (USJ) -->
     <section id="tab-usj" class="tab-content">
       <div class="usj-hero">
         <h3>🎢 2026/10/05 (週一) 日本環球影城攻略指南</h3>
-        <p>週一進場有效避開週末人潮，搭配快速通關（Express Pass）與官方 App 整理券體驗最佳。</p>
+        <p>安排在平日週一進場，可顯著避開週末高峰人潮！搭配快速通關（Express Pass）與官方 App 整理券，暢遊超級任天堂世界與各大熱門主題。</p>
+
         <div class="usj-tips-grid">
-          <div class="usj-tip-card"><div class="usj-tip-title">⏰ 搶票時程</div><div class="usj-tip-desc">門票與 Express 快速通關通常於入園前 2 個月（約 8 月初）開賣。</div></div>
-          <div class="usj-tip-card"><div class="usj-tip-title">📱 官方 App 綁定</div><div class="usj-tip-desc">入園後第一時間開啟 App 搶抽「電子整理券（e-Timed Entry Ticket）」。</div></div>
-          <div class="usj-tip-card"><div class="usj-tip-title">🍄 超級任天堂世界</div><div class="usj-tip-desc">庫巴城堡瑪利歐賽車、耀西冒險與全新擴建咚奇剛礦車。</div></div>
+          <div class="usj-tip-card">
+            <div class="usj-tip-title">⏰ 搶票黃金時間點</div>
+            <div class="usj-tip-desc">門票與 Express 快速通關通常於<strong>入園前 2 個月（約 8 月初）</strong>全面開賣，務必第一時間鎖定含有「任天堂園區」與「哈利波特」之方案！</div>
+          </div>
+          <div class="usj-tip-card">
+            <div class="usj-tip-title">📱 官方 App 綁定</div>
+            <div class="usj-tip-desc">提前下載 USJ 官方 App 並登錄同行者門票。入園掃過閘門後，立即開啟 App 搶抽「電子整理券（e-Timed Entry Ticket）」。</div>
+          </div>
+          <div class="usj-tip-card">
+            <div class="usj-tip-title">🍄 超級任天堂世界</div>
+            <div class="usj-tip-desc">購買「能量手環」收集金幣印章。重點衝刺：庫巴城堡瑪利歐賽車、耀西冒險，以及全新擴建之咚奇剛瘋狂礦車！</div>
+          </div>
+          <div class="usj-tip-card">
+            <div class="usj-tip-title">⚡ 必玩熱門清單</div>
+            <div class="usj-tip-desc">哈利波特禁忌之旅、侏儸紀公園「飛天翼龍」、小小兵瘋狂乘車遊、好萊塢美夢乘車遊。</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 行前清單 -->
+    <!-- Tab 4: 行前清單 (Checklist) -->
     <section id="tab-checklist" class="tab-content">
       <div class="card">
-        <div class="card-header"><div class="card-title">📋 出國前待辦清單</div><span id="checklist-counter">已完成 2 / 5 項</span></div>
-        <div class="progress-bar-wrap"><div class="progress-bar" id="checklist-progress"></div></div>
-        <div class="checklist-item"><input type="checkbox" id="c1" checked onchange="updateProgress()"><label for="c1"><b>機票開票付款：</b>9/29 CI152 與 10/9 CI153 航班付款</label></div>
-        <div class="checklist-item"><input type="checkbox" id="c2" onchange="updateProgress()"><label for="c2"><b>飯店預訂：</b>京都 4 晚 + 大阪 6 晚住宿確認</label></div>
-        <div class="checklist-item"><input type="checkbox" id="c3" onchange="updateProgress()"><label for="c3"><b>USJ 票券：</b>10/5 門票 + Express 快速通關券購買</label></div>
-        <div class="checklist-item"><input type="checkbox" id="c4" checked onchange="updateProgress()"><label for="c4"><b>護照效期：</b>確認效期大於 6 個月以上</label></div>
-        <div class="checklist-item"><input type="checkbox" id="c5" onchange="updateProgress()"><label for="c5"><b>Visit Japan Web：</b>填寫入境與海關申報並截圖 QR Code</label></div>
+        <div class="card-header">
+          <div class="card-title">📋 出國前必備待辦與確認清單</div>
+          <span style="font-size: 0.85rem; color: var(--text-muted);" id="checklist-counter">已完成 2 / 8 項</span>
+        </div>
+
+        <div class="progress-bar-wrap">
+          <div class="progress-bar" id="checklist-progress"></div>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-item">
+            <input type="checkbox" id="chk-1" checked onchange="updateProgress()">
+            <div class="checklist-text">
+              <label for="chk-1" class="checklist-title">機票航班確認與開票</label>
+              <div class="checklist-desc">確認 9/29 CI152 (09:00 TPE ➔ 12:50 KIX) 與 10/9 CI153 (14:00 KIX ➔ 16:00 TPE) 正式付款。</div>
+            </div>
+          </div>
+
+          <div class="checklist-item">
+            <input type="checkbox" id="chk-2" onchange="updateProgress()">
+            <div class="checklist-text">
+              <label for="chk-2" class="checklist-title">京都與大阪飯店預訂</label>
+              <div class="checklist-desc">京都 4 晚 (9/29-10/3) + 大阪 6 晚 (10/3-10/9) 預訂並記錄確認號。</div>
+            </div>
+          </div>
+
+          <div class="checklist-item">
+            <input type="checkbox" id="chk-3" onchange="updateProgress()">
+            <div class="checklist-text">
+              <label for="chk-3" class="checklist-title">USJ 門票與 Express 快速通關券搶購</label>
+              <div class="checklist-desc">鎖定 10/5 (週一) 方案，於 2 個月前（8月初）購票完成。</div>
+            </div>
+          </div>
+
+          <div class="checklist-item">
+            <input type="checkbox" id="chk-4" onchange="updateProgress()">
+            <div class="checklist-text">
+              <label for="chk-4" class="checklist-title">關西機場特急 Haruka 電子票預約</label>
+              <div class="checklist-desc">預訂 KIX ➔ 京都單程特急 Haruka 指定席。</div>
+            </div>
+          </div>
+
+          <div class="checklist-item">
+            <input type="checkbox" id="chk-5" checked onchange="updateProgress()">
+            <div class="checklist-text">
+              <label for="chk-5" class="checklist-title">護照有效期限檢查</label>
+              <div class="checklist-desc">確認同行人員護照效期均在 6 個月以上。</div>
+            </div>
+          </div>
+
+          <div class="checklist-item">
+            <input type="checkbox" id="chk-6" onchange="updateProgress()">
+            <div class="checklist-text">
+              <label for="chk-6" class="checklist-title">日本上網 eSIM / 漫遊開通</label>
+              <div class="checklist-desc">依用量選購 Softbank/Docomo 原廠訊號吃到飽或定量方案。</div>
+            </div>
+          </div>
+
+          <div class="checklist-item">
+            <input type="checkbox" id="chk-7" onchange="updateProgress()">
+            <div class="checklist-text">
+              <label for="chk-7" class="checklist-title">填寫 Visit Japan Web (入境與海關申報)</label>
+              <div class="checklist-desc">出發前 3~7 天完成線上登記並截圖入境 QR Code。</div>
+            </div>
+          </div>
+
+          <div class="checklist-item">
+            <input type="checkbox" id="chk-8" onchange="updateProgress()">
+            <div class="checklist-text">
+              <label for="chk-8" class="checklist-title">日幣現金換匯與海外高回饋信用卡確認</label>
+              <div class="checklist-desc">準備適量 JPY 現金（小吃、神社御守）並開通海外刷卡通知。</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- 預算估算 -->
+    <!-- Tab 5: 預算估算 (Budget) -->
     <section id="tab-budget" class="tab-content">
       <div class="card">
-        <div class="card-header"><div class="card-title">💰 預算編列與預估花費</div></div>
-        <table>
-          <thead><tr><th>項目</th><th class="num-col">預估費用 (TWD/人)</th><th class="num-col">狀態</th></tr></thead>
-          <tbody>
-            <tr><td>✈️ 華航來回機票 (CI152/CI153)</td><td class="num-col">NT$ 15,000</td><td class="num-col">待付款</td></tr>
-            <tr><td>🏨 京都 4 晚 + 大阪 6 晚住宿</td><td class="num-col">NT$ 22,000</td><td class="num-col">待預訂</td></tr>
-            <tr><td>🎢 USJ門票 + Express快速通關</td><td class="num-col">NT$ 7,500</td><td class="num-col">待購票</td></tr>
-            <tr><td>🚇 在地交通 (Haruka+地鐵+近鐵)</td><td class="num-col">NT$ 3,200</td><td class="num-col">待購票</td></tr>
-            <tr><td>🍽️ 11 天餐飲與美食</td><td class="num-col">NT$ 18,000</td><td class="num-col">旅程現付</td></tr>
-          </tbody>
-          <tfoot><tr class="tfoot-total"><td>合計預估 (每人)</td><td class="num-col" style="color:var(--primary);">NT$ 65,700</td><td></td></tr></tfoot>
-        </table>
+        <div class="card-header">
+          <div class="card-title">💰 預算編列與實際花費估算表</div>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">匯率估算：1 JPY ≈ 0.215 TWD</span>
+        </div>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>項目分類</th>
+                <th>說明細節</th>
+                <th class="num-col">預估費用 (TWD/人)</th>
+                <th class="num-col">付款狀態</th>
+                <th>備註</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>✈️ 國際機票</strong></td>
+                <td>華航 CI152/CI153 來回機票 (含20kg託運)</td>
+                <td class="num-col">NT$ 15,000</td>
+                <td class="num-col"><span class="badge-status pending">待付款</span></td>
+                <td>桃園 ⇄ 關西</td>
+              </tr>
+              <tr>
+                <td><strong>🏨 飯店住宿</strong></td>
+                <td>京都 4 晚 + 大阪 6 晚 (雙人房均攤)</td>
+                <td class="num-col">NT$ 22,000</td>
+                <td class="num-col"><span class="badge-status pending">待預訂</span></td>
+                <td>平均每人每晚約 NT$ 2,200</td>
+              </tr>
+              <tr>
+                <td><strong>🎢 門票票券</strong></td>
+                <td>USJ 門票 + Express 4 快速通關 + 海遊館 + 寺廟門票</td>
+                <td class="num-col">NT$ 7,500</td>
+                <td class="num-col"><span class="badge-status pending">待購票</span></td>
+                <td>USJ 快速通關為浮動票價</td>
+              </tr>
+              <tr>
+                <td><strong>🚇 在地交通</strong></td>
+                <td>Haruka 特急 + 南海電鐵 Rapi:t + 地鐵與近鐵卡</td>
+                <td class="num-col">NT$ 3,200</td>
+                <td class="num-col"><span class="badge-status pending">待預訂</span></td>
+                <td>ICOCA 儲值運用</td>
+              </tr>
+              <tr>
+                <td><strong>🍽️ 餐飲美食</strong></td>
+                <td>11 天特色餐廳、咖啡廳、生鮮市場與居酒屋</td>
+                <td class="num-col">NT$ 18,000</td>
+                <td class="num-col"><span class="badge-status pending">旅程現付</span></td>
+                <td>每日約 5,000~8,000 JPY</td>
+              </tr>
+              <tr>
+                <td><strong>🛍️ 購物伴手禮</strong></td>
+                <td>藥妝、日系服飾、特色文創與機場伴手禮</td>
+                <td class="num-col">NT$ 15,000</td>
+                <td class="num-col"><span class="badge-status pending">旅程現付</span></td>
+                <td>依個人採購彈性調整</td>
+              </tr>
+              <tr>
+                <td><strong>🛡️ 雜支保險</strong></td>
+                <td>海外旅遊平安不便險 + eSIM 網卡</td>
+                <td class="num-col">NT$ 1,500</td>
+                <td class="num-col"><span class="badge-status pending">出發前付</span></td>
+                <td>加強班機延誤與醫療保障</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="tfoot-total">
+                <td colspan="2">合計預估總額 (每人)</td>
+                <td class="num-col" style="color: var(--primary);">NT$ 82,200</td>
+                <td colspan="2" style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">實際花費將依匯率與消費調整</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
       </div>
     </section>
 
-    <!-- Google 試算表連結按鈕 -->
-    <div class="action-banner">
-      <div><h4>📊 線上雲端試算表已同步</h4><p>可直接在 Google 試算表中自訂調整每日時間與花費記錄。</p></div>
-      <a href="https://docs.google.com/spreadsheets/d/1GvMfOjgWOJeZOUsg6qvZLWES_tb4dbN8INPi8LHqAto/edit" target="_blank" class="btn-sheet">開啟 Google 試算表 ↗</a>
-    </div>
   </main>
 
   <script>
     function switchTab(tabId, btn) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-      const t = document.getElementById('tab-' + tabId);
-      if (t) { t.classList.add('active'); btn.classList.add('active'); }
+      
+      const target = document.getElementById('tab-' + tabId);
+      if (target) {
+        target.classList.add('active');
+        btn.classList.add('active');
+      }
     }
+
     function showDay(dayNum, btn) {
       document.querySelectorAll('.day-section').forEach(el => el.style.display = 'none');
       document.querySelectorAll('.day-btn').forEach(el => el.classList.remove('active'));
-      const d = document.getElementById('day-' + dayNum);
-      if (d) { d.style.display = 'block'; btn.classList.add('active'); }
+      
+      const target = document.getElementById('day-' + dayNum);
+      if (target) {
+        target.style.display = 'block';
+        btn.classList.add('active');
+      }
     }
+
     function updateProgress() {
-      const cbs = document.querySelectorAll('.checklist-item input[type="checkbox"]');
-      let c = 0; cbs.forEach(cb => { if (cb.checked) c++; });
-      const pct = Math.round((c / cbs.length) * 100);
+      const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+      const total = checkboxes.length;
+      let checked = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) checked++;
+      });
+      const pct = Math.round((checked / total) * 100);
       document.getElementById('checklist-progress').style.width = pct + '%';
-      document.getElementById('checklist-counter').innerText = `已完成 ${c} / ${cbs.length} 項 (${pct}%)`;
+      document.getElementById('checklist-counter').innerText = `已完成 ${checked} / ${total} 項 (${pct}%)`;
     }
+
+    // Init progress on load
     updateProgress();
   </script>
 </body>
