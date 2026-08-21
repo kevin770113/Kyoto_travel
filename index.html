@@ -3,50 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026 Kansai Trip</title>
+  <title>2026 關西秋季之旅 11天10夜 行程規劃與即時追蹤</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="container relative">
-      <!-- 語系切換按鈕 -->
-      <div class="lang-switch">
-        <select id="langSelector" onchange="changeLanguage()">
-          <option value="zh">🇹🇼 中文 (ZH)</option>
-          <option value="vi">🇻🇳 Tiếng Việt (VI)</option>
-        </select>
-        <a href="print_a4.html" target="_blank" class="print-btn" id="ui-print-btn">🖨️ 列印 A4</a>
-      </div>
 
-      <div class="badge-trip" id="ui-badge">🍁 2026 秋季關西・京都大阪・樂園漫遊</div>
-      <h1 id="ui-title">京都・大阪 11 天 10 夜行程規劃</h1>
-      <div class="hero-subtitle" id="ui-subtitle">2026/09/29 ～ 2026/10/09 ｜ 中華航空 CI152 / CI153</div>
-    </div>
-  </header>
-
-  <div class="nav-tabs-wrapper">
-    <div class="container">
-      <div class="nav-tabs" id="ui-tabs">
-        <button class="tab-btn active" onclick="switchTab('itinerary', this)" id="tab-1">📅 每日行程</button>
-        <button class="tab-btn" onclick="switchTab('booking', this)" id="tab-2">✈️ 航班住宿</button>
+  <!-- 獨立頂部導覽列：語系切換與列印按鈕 -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="brand-tag">⛩️ Japan Travel Planner</div>
+      <div class="top-actions">
+        <div class="lang-select-wrap">
+          <select id="lang-select" class="lang-select">
+            <option value="zh" selected>🇹🇼 中文 (繁體)</option>
+            <option value="vi">🇻🇳 Tiếng Việt</option>
+          </select>
+        </div>
+        <button id="btn-print" class="btn-print-action">🖨️ 列印 A4 申請表</button>
       </div>
     </div>
   </div>
 
+  <!-- 主視覺 Header -->
+  <header>
+    <div class="container">
+      <div class="badge-trip" id="badge-trip">🍁 2026 秋季關西・京都大阪・樂園漫遊</div>
+      <h1 id="hero-title">京都・大阪 11 天 10 夜行程規劃</h1>
+      <div class="hero-subtitle" id="hero-subtitle">2026/09/29 (週二) ～ 2026/10/09 (週五) ｜ 中華航空 CI152 / CI153</div>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-label" id="stat-duration-lbl">旅遊天數</div>
+          <div class="stat-value" id="stat-duration-val">11 天 10 夜</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label" id="stat-theme-lbl">重點主題</div>
+          <div class="stat-value" id="stat-theme-val">京都古都 + USJ環球</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label" id="stat-stay-lbl">住宿分段</div>
+          <div class="stat-value" id="stat-stay-val">京都 4 晚 + 大阪 6 晚</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label" id="stat-usj-lbl">USJ 日期</div>
+          <div class="stat-value" id="stat-usj-val">10/05 (週一)</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 分頁導覽列 -->
+  <div class="nav-tabs-wrapper">
+    <div class="container">
+      <div class="nav-tabs">
+        <button class="tab-btn active" id="tab-btn-itinerary" onclick="switchTab('itinerary')">📅 每日詳細行程</button>
+        <button class="tab-btn" id="tab-btn-booking" onclick="switchTab('booking')">✈️ 航班住宿狀態</button>
+        <button class="tab-btn" id="tab-btn-usj" onclick="switchTab('usj')">🎢 環球影城專題</button>
+        <button class="tab-btn" id="tab-btn-checklist" onclick="switchTab('checklist')">📋 行前待辦清單</button>
+        <button class="tab-btn" id="tab-btn-budget" onclick="switchTab('budget')">💰 預算花費估算</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主內容容器 -->
   <main class="container">
-    <!-- 行程分頁 -->
+    <!-- Tab 1: 每日行程 -->
     <section id="tab-itinerary" class="tab-content active">
-      <div class="day-selector" id="daySelectorContainer"></div>
-      <div id="dayContentContainer"></div>
+      <div class="day-selector" id="day-selector"></div>
+      <div id="day-cards-container"></div>
     </section>
 
-    <!-- 航班住宿分頁 -->
+    <!-- Tab 2: 航班與住宿狀態 -->
     <section id="tab-booking" class="tab-content">
-      <div class="grid-2" id="bookingContentContainer"></div>
+      <div id="booking-container"></div>
+    </section>
+
+    <!-- Tab 3: 環球影城專題 -->
+    <section id="tab-usj" class="tab-content">
+      <div id="usj-container"></div>
+    </section>
+
+    <!-- Tab 4: 行前待辦清單 -->
+    <section id="tab-checklist" class="tab-content">
+      <div id="checklist-container"></div>
+    </section>
+
+    <!-- Tab 5: 預算花費估算 -->
+    <section id="tab-budget" class="tab-content">
+      <div id="budget-container"></div>
     </section>
   </main>
 
-  <!-- 引入資料與邏輯 -->
+  <!-- A4 列印專用容器（螢幕上隱藏，列印時自動填滿單頁 A4） -->
+  <div id="print-container"></div>
+
+  <!-- 載入腳本 -->
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
