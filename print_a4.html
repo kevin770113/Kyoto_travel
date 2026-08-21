@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>2026 Kansai Trip Itinerary (A4 Print)</title>
+  <style>
+    /* A4 列印核心設定 */
+    @page { size: A4; margin: 15mm; }
+    body { font-family: "Times New Roman", "Noto Sans TC", sans-serif; font-size: 11pt; color: #000; background: #fff; margin: 0; padding: 0; }
+    .header { text-align: center; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
+    .header h1 { font-size: 16pt; margin: 0 0 5px 0; }
+    .header p { margin: 0; font-size: 10pt; color: #333; }
+    
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; page-break-inside: auto; }
+    tr { page-break-inside: avoid; page-break-after: auto; }
+    th, td { border: 1px solid #333; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background-color: #f0f0f0; font-weight: bold; }
+    
+    .date-col { width: 15%; }
+    .loc-col { width: 25%; }
+    .act-col { width: 35%; }
+    .hotel-col { width: 25%; }
+
+    /* 隱藏列印按鈕 */
+    .no-print { text-align: center; margin-bottom: 20px; }
+    .no-print button { padding: 10px 20px; cursor: pointer; font-size: 14px; background: #2563eb; color: white; border: none; border-radius: 5px; }
+    @media print { .no-print { display: none !important; } }
+  </style>
+</head>
+<body>
+  <div class="no-print">
+    <button onclick="window.print()">🖨️ 列印或另存 PDF (Print / Save as PDF)</button>
+  </div>
+
+  <div class="header">
+    <h1>Travel Itinerary / Lịch trình Du lịch (Japan)</h1>
+    <p>Travelers: Chuang Shih-hsien & Partner | Date: 2026/09/29 - 2026/10/09</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="date-col">Date<br>(Ngày)</th>
+        <th class="loc-col">City / Area<br>(Khu vực)</th>
+        <th class="act-col">Main Activities<br>(Hoạt động chính)</th>
+        <th class="hotel-col">Accommodation<br>(Chỗ ở)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>09/29 (Tue)</strong></td>
+        <td>Osaka (KIX) -> Kyoto</td>
+        <td>Flight CI152 (09:00-12:50). Arrive at KIX. Transfer to Kyoto via Haruka Express. Pontocho walk.</td>
+        <td rowspan="4">Kyoto Hotel<br>(e.g., Shijo Karasuma Area)<br>TBD</td>
+      </tr>
+      <tr>
+        <td><strong>09/30 (Wed)</strong></td>
+        <td>Kyoto</td>
+        <td>Kiyomizu-dera Temple, Ninenzaka, Yasaka Shrine, Gion district.</td>
+      </tr>
+      <tr>
+        <td><strong>10/01 (Thu)</strong></td>
+        <td>Kyoto</td>
+        <td>Fushimi Inari Taisha (Thousand Torii gates), Nishiki Market, Kinkaku-ji.</td>
+      </tr>
+      <tr>
+        <td><strong>10/02 (Fri)</strong></td>
+        <td>Kyoto (Arashiyama)</td>
+        <td>Sagano Romantic Train, Bamboo Grove, Togetsukyo Bridge.</td>
+      </tr>
+      <tr>
+        <td><strong>10/03 (Sat)</strong></td>
+        <td>Kyoto -> Osaka</td>
+        <td>Uji sightseeing (Byodo-in). Transfer to Osaka in the afternoon. Dotonbori.</td>
+        <td rowspan="7">Osaka Hotel<br>(e.g., Namba / Umeda Area)<br>TBD</td>
+      </tr>
+      <tr>
+        <td><strong>10/04 (Sun)</strong></td>
+        <td>Osaka</td>
+        <td>Osaka Castle, Shinsekai, Umeda Sky Building Observatory.</td>
+      </tr>
+      <tr>
+        <td><strong>10/05 (Mon)</strong></td>
+        <td>Osaka (USJ)</td>
+        <td>Universal Studios Japan (Super Nintendo World, Harry Potter).</td>
+      </tr>
+      <tr>
+        <td><strong>10/06 (Tue)</strong></td>
+        <td>Osaka</td>
+        <td>Osaka Aquarium Kaiyukan, Kuromon Market, Namba Yasaka Shrine.</td>
+      </tr>
+      <tr>
+        <td><strong>10/07 (Wed)</strong></td>
+        <td>Nara</td>
+        <td>Nara Park (Deer feeding), Todai-ji Temple, Kasuga Taisha.</td>
+      </tr>
+      <tr>
+        <td><strong>10/08 (Thu)</strong></td>
+        <td>Osaka</td>
+        <td>Nakazakicho retro district, Umeda Shopping, Orange Street.</td>
+      </tr>
+      <tr>
+        <td><strong>10/09 (Fri)</strong></td>
+        <td>Osaka -> TPE</td>
+        <td>Transfer to KIX via Nankai Rapi:t. Flight CI153 (14:00-16:00) to Taiwan.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="font-size: 9pt; color: #555; margin-top: 20px;">
+    * This itinerary is prepared for visa application and travel planning purposes. Flights and accommodation details are subject to final booking confirmation.
+  </div>
+</body>
+</html>
