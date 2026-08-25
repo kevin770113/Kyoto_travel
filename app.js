@@ -1,4 +1,4 @@
-// 應用程式邏輯控制 (App Logic & i18n Controller)
+// 應用程式邏輯控制 (App Logic & i18n Controller - 10 Days 9 Nights)
 let currentLang = 'zh';
 let activeDay = 1;
 let activeTab = 'itinerary';
@@ -77,7 +77,7 @@ function renderLanguage(lang) {
   showDay(activeDay);
 }
 
-// 渲染每日行程（按鈕列表 + 11天詳細行程卡片）
+// 渲染每日行程（按鈕列表 + 10天詳細行程卡片）
 function renderItinerary(days, lang) {
   const daySelector = document.getElementById('day-selector');
   const dayCardsContainer = document.getElementById('day-cards-container');
@@ -148,7 +148,7 @@ function renderItinerary(days, lang) {
   });
 }
 
-// 渲染航班與住宿（完整呈現去回程 CI152/CI153 與京都4晚/大阪6晚）
+// 渲染航班與住宿（完整呈現去回程 CI156/CI153 與京都4晚/大阪5晚）
 function renderBooking(b) {
   const container = document.getElementById('booking-container');
   container.innerHTML = `
@@ -157,13 +157,13 @@ function renderBooking(b) {
       <div class="card">
         <div class="card-header">
           <div class="card-title">${b.flightCardTitle}</div>
-          <span class="badge-status pending">${b.flightStatus}</span>
+          <span class="badge-status confirmed">${b.flightStatus}</span>
         </div>
         
         <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px;">${b.outboundLabel}</div>
         <div class="flight-route">
           <div class="flight-point">
-            <div class="flight-time">09:00</div>
+            <div class="flight-time">08:15</div>
             <div class="flight-code">TPE 桃園 T2</div>
           </div>
           <div class="flight-arrow">
@@ -172,7 +172,7 @@ function renderBooking(b) {
             <span>➔</span>
           </div>
           <div class="flight-point">
-            <div class="flight-time">12:50</div>
+            <div class="flight-time">12:00</div>
             <div class="flight-code">KIX 關西 T1</div>
           </div>
         </div>
@@ -321,7 +321,7 @@ function renderBudget(b) {
         <td><strong>${r.cat}</strong></td>
         <td>${r.desc}</td>
         <td class="num-col">${r.cost}</td>
-        <td class="num-col"><span class="badge-status pending">${r.status}</span></td>
+        <td class="num-col"><span class="badge-status ${r.status === '已確認' || r.status === 'Đã xác nhận' ? 'confirmed' : 'pending'}">${r.status}</span></td>
         <td>${r.note}</td>
       </tr>
     `;
@@ -359,7 +359,7 @@ function renderBudget(b) {
   `;
 }
 
-// 渲染 A4 列印格式
+// 渲染 A4 列印格式 (10 Days 9 Nights)
 function renderPrintDocument(p) {
   const container = document.getElementById('print-container');
   let tableRows = '';
