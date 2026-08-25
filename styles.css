@@ -37,7 +37,7 @@ body {
   padding-bottom: 60px;
 }
 
-/* 獨立頂部導覽列（避免按鈕遮擋標題） */
+/* 獨立頂部導覽列 */
 .top-bar {
   background: #0f172a;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -456,6 +456,12 @@ h1 {
   border: 1px solid #fde68a;
 }
 
+.badge-status.confirmed {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid #a7f3d0;
+}
+
 .flight-route {
   display: flex;
   align-items: center;
@@ -602,7 +608,7 @@ td { padding: 14px 16px; border-bottom: 1px solid var(--border); }
     background: #e2e8f0 !important;
     color: #0f172a !important;
     border: 1px solid #64748b !important;
-    padding: 5px 6px !important;
+    padding: 6px 6px !important;
     font-size: 9pt !important;
     font-weight: 800 !important;
     text-align: left !important;
@@ -612,7 +618,7 @@ td { padding: 14px 16px; border-bottom: 1px solid var(--border); }
 
   .print-table td {
     border: 1px solid #94a3b8 !important;
-    padding: 5px 6px !important;
+    padding: 6px 6px !important;
     font-size: 8.5pt !important;
     line-height: 1.35 !important;
     color: #1e293b !important;
