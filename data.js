@@ -35,17 +35,73 @@ const i18nData = {
       inboundAirline: "中華航空 CI153",
       inboundTime: "14:00 關西 T1 ➔ 16:00 桃園 T2",
       inboundDetail: "飛行時間 3h 00m ｜ 空中巴士 A350 ｜ 每人託運 1 件 (≦158cm)",
+      returnTransitTip: "🚆 大阪回程機場交通：預計於「南海難波站」搭乘【南海特急 Rapi:t】（約 38 分鐘直達關西機場 T1），全車對號座且設有大型行李架，最為省時舒適。",
       flightTip: "💡 提示：華航 A350 新機型舒適度佳，出發前 48 小時可預辦線上登機並劃位。",
-      hotelCardTitle: "🏨 飯店住宿規劃與狀態",
-      hotelStatus: "待預訂",
-      kyotoStayTitle: "📍 第一段：京都（4 晚）",
-      kyotoDates: "2026/10/01 (四) ～ 2026/10/05 (一)",
-      kyotoArea: "首選區域：四條烏丸／河原町 或 京都車站周邊",
-      kyotoRecom: "推薦飯店：三井花園飯店京都河原町淨教寺、Cross Hotel Kyoto、京都千飯店 (THE THOUSAND KYOTO)",
-      osakaStayTitle: "📍 第二段：大阪（5 晚）",
-      osakaDates: "2026/10/05 (一) ～ 2026/10/10 (六)",
-      osakaArea: "首選區域：難波／心齋橋 或 梅田商圈",
-      osakaRecom: "推薦飯店：大阪南海瑞士飯店 (Swissotel Nankai)、大阪十字飯店 (Cross Hotel Osaka)、心齋橋日航酒店"
+      
+      hotelCardTitle: "🏨 精選推薦飯店（每晚 NT$ 5,000 以下，交通/美食/伴手禮精選）",
+      hotelSubTitle: "以下嚴選符合「京都下車即達／晚餐方便吃壽司燒肉」與「大阪近南海難波站／伴手禮採買便利」之高評價住宿：",
+      
+      kyotoSectionTitle: "⛩️ 京都推薦飯店（4 晚：10/01～10/05｜近車站／先斗町壽司燒肉首選）",
+      kyotoHotels: [
+        {
+          name: "三井花園飯店 京都河原町淨教寺",
+          enName: "Mitsui Garden Hotel Kyoto Kawaramachi Jokyoji",
+          tag: "先斗町美食商圈 ⭐",
+          price: "約 NT$ 4,200 ～ 4,800 / 晚",
+          location: "阪急京都河原町站步行 1 分鐘／京阪祇園四條站步行 5 分鐘",
+          advantage: "交通樞紐與古寺結合的特色飯店，設有質感大浴場。",
+          foodHighlight: "🍣 壽司與 🔥 燒肉極致便利：步行 2 分鐘直達「先斗町」與「木屋町通」，聚集【京之燒肉處 弘（四條木屋町店）】、【Mori Mori 迴轉壽司】、【壽司之武藏三條店】與道地居酒屋。"
+        },
+        {
+          name: "京都格蘭比亞維斯奇歐飯店",
+          enName: "HOTEL VISCHIO KYOTO by GRANVIA",
+          tag: "JR京都站八條口 🚄",
+          price: "約 NT$ 3,800 ～ 4,500 / 晚",
+          location: "JR 京都站八條口步行 2 分鐘（下機場 Haruka 出站即達）",
+          advantage: "下機場特急後免拖大行李轉乘，館內附男女大浴場與免費住客休憩 Lounge。",
+          foodHighlight: "🍣 壽司與 🔥 燒肉極致便利：車站共構 Porta 地下街與近鐵八條小路，有【京之燒肉處 弘（京都站前店）】、【壽司之武藏（八條口店）】、【築地壽司清（伊勢丹百貨店）】。"
+        },
+        {
+          name: "京都阿拉飯店",
+          enName: "Ala Hotel Kyoto",
+          tag: "頂樓景觀溫泉 ♨️",
+          price: "約 NT$ 3,600 ～ 4,300 / 晚",
+          location: "JR 京都站中央口步行 4 分鐘",
+          advantage: "高評價新開幕飯店，頂樓設有男女露天景觀大浴場與桑拿水療。",
+          foodHighlight: "🍣 壽司與 🔥 燒肉極致便利：步行 3～5 分鐘可達【燒肉庵 兆（京都站前店）】、【天下的燒肉 大將軍】與京都塔 SANDO 美食地下街。"
+        }
+      ],
+
+      osakaSectionTitle: "🛍️ 大阪推薦飯店（5 晚：10/05～10/10｜直達南海難波／伴手禮採買首選）",
+      osakaHotels: [
+        {
+          name: "大阪十字飯店",
+          enName: "Cross Hotel Osaka",
+          tag: "伴手禮與逛街王者 👑",
+          price: "約 NT$ 4,200 ～ 4,800 / 晚",
+          location: "步行至「南海難波站」約 6～8 分鐘（搭 Rapi:t 直達機場）；心齋橋站 3 分鐘",
+          advantage: "下樓即是心齋橋筋與道頓堀，房間寬敞新穎，地理位置最精華。",
+          shoppingHighlight: "🎁 伴手禮極致便利：步行 3 分鐘達【大丸百貨心齋橋店】（B1 伴手禮街、AND THE FRIET 頂級薯條、獺祭清酒、Pokemon Center 旗艦店）；步行 6 分鐘達【高島屋百貨】（Bâton d'or 頂級 Pocky、福砂屋、Royce'）；24小時唐吉訶德與 551 蓬萊肉包總店都在身邊。"
+        },
+        {
+          name: "格拉斯麗大阪難波飯店",
+          enName: "Hotel Gracery Osaka Namba",
+          tag: "南海難波站旁高 CP 🚆",
+          price: "約 NT$ 3,200 ～ 3,800 / 晚",
+          location: "步行至「南海難波站」僅約 4～5 分鐘（拖行李去機場超輕鬆）",
+          advantage: "日式獨立衛浴乾濕分離，安靜舒適且性價比極高。",
+          shoppingHighlight: "🎁 伴手禮極致便利：緊鄰【難波 CITY】、【難波 PARKS】與【高島屋大阪店】，買完伴手禮直接提回飯店放；步行 3 分鐘可達 551 蓬萊肉包總店與老爺爺起司蛋糕總店。"
+        },
+        {
+          name: "難波御宿野乃天然溫泉飯店",
+          enName: "Onyado Nono Namba Natural Hot Spring",
+          tag: "天然溫泉＆黑門市場 ♨️",
+          price: "約 NT$ 3,900 ～ 4,600 / 晚",
+          location: "地鐵/近鐵日本橋站步行 1 分鐘／步行至「南海難波站」約 7 分鐘",
+          advantage: "Dormy Inn 旗下全館日式榻榻米溫泉飯店，附設天然溫泉大浴場與免費夜鳴拉麵。",
+          shoppingHighlight: "🎁 伴手禮極致便利：步行 2 分鐘即達【黑門市場】生鮮乾貨與【千日前道具街】，散步至難波高島屋與道頓堀商圈採購伴手禮非常便利。"
+        }
+      ]
     },
     usj: {
       heroTitle: "🎢 2026/10/06 (週二) 日本環球影城攻略指南",
@@ -429,8 +485,8 @@ const i18nData = {
         cityClass: "osaka",
         title: "Day 10：滿載回憶・關西機場出境順利返台",
         timeline: [
-          { time: "09:30 - 10:30", title: "飯店退房・前往南海難波站", desc: "悠閒享用早餐後退房，步行前往難波站搭乘特急 Rapi:t。" },
-          { time: "10:30 - 11:15", title: "搭乘南海電鐵特急 Rapi:t 直達關西機場", desc: "約 38 分鐘直達關西國際機場第一航廈（T1）。" },
+          { time: "09:30 - 10:30", title: "飯店退房・前往南海難波站", desc: "悠閒享用早餐後退房，步行前往南海難波站搭乘特急 Rapi:t。" },
+          { time: "10:30 - 11:15", title: "搭乘南海電鐵特急 Rapi:t 直達關西機場", desc: "約 38 分鐘直達關西國際機場第一航廈（T1），車廂舒適且有行李架。" },
           { time: "11:30 - 13:30", title: "華航櫃台報到託運・機場免稅店最後採買", desc: "起飛前 2.5 小時完成行李託運，採購白色戀人、Royce 生巧克力等伴手禮。" },
           { time: "14:00 - 16:00", title: "搭乘華航 CI153 起飛（A350）・平安降落桃園 T2", desc: "平安抵達台灣，結束 10 天精彩難忘的關西秋日之旅！" }
         ],
@@ -506,17 +562,73 @@ const i18nData = {
       inboundAirline: "China Airlines CI153",
       inboundTime: "14:00 Osaka (KIX T1) ➔ 16:00 Đài Bắc (TPE T2)",
       inboundDetail: "Thời gian bay 3h 00m ｜ Airbus A350 ｜ Hành lý ký gửi 1 kiện (≦158cm)",
+      returnTransitTip: "🚆 Tàu ra sân bay ngày về: Dự kiến đón tàu tốc hành 【Nankai Rapi:t】 tại Ga Nankai Namba (khoảng 38 phút chạy thẳng đến Ga Sân bay Kansai T1), toàn bộ ghế đặt trước có khoang để hành lý lớn, nhanh chóng và thoải mái nhất.",
       flightTip: "💡 Gợi ý: Máy bay Airbus A350 hiện đại và tiện nghi. Có thể check-in online và chọn chỗ ngồi trước 48 giờ.",
-      hotelCardTitle: "🏨 Kế hoạch & Tình trạng Khách sạn",
-      hotelStatus: "Chờ đặt phòng",
-      kyotoStayTitle: "📍 Chặng 1: Kyoto (4 Đêm)",
-      kyotoDates: "01/10/2026 (Thứ 5) ～ 05/10/2026 (Thứ 2)",
-      kyotoArea: "Khu vực ưu tiên: Shijo Karasuma / Kawaramachi hoặc Ga Kyoto",
-      kyotoRecom: "Khách sạn đề xuất: Mitsui Garden Hotel Kyoto Kawaramachi Jokyoji, Cross Hotel Kyoto, THE THOUSAND KYOTO",
-      osakaStayTitle: "📍 Chặng 2: Osaka (5 Đêm)",
-      osakaDates: "05/10/2026 (Thứ 2) ～ 10/10/2026 (Thứ 7)",
-      osakaArea: "Khu vực ưu tiên: Namba / Shinsaibashi hoặc Khu vực Umeda",
-      osakaRecom: "Khách sạn đề xuất: Swissotel Nankai Osaka, Cross Hotel Osaka, Hotel Nikko Osaka"
+      
+      hotelCardTitle: "🏨 Danh Sách Khách Sạn Chọn Lọc (Dưới NT$ 5,000 / Đêm)",
+      hotelSubTitle: "Khách sạn chất lượng cao đáp ứng tiêu chí: Kyoto gần ga & tiện ăn Sushi/Thịt nướng; Osaka gần Ga Nankai Namba & tiện mua quà lưu niệm:",
+      
+      kyotoSectionTitle: "⛩️ Khách Sạn Đề Xuất Tại Kyoto (4 Đêm: 01/10～05/10 ｜ Tiện ăn Sushi & Yakiniku)",
+      kyotoHotels: [
+        {
+          name: "Mitsui Garden Hotel Kyoto Kawaramachi Jokyoji",
+          enName: "Mitsui Garden Hotel Kyoto Kawaramachi Jokyoji",
+          tag: "Ẩm thực Phố Cổ Pontocho ⭐",
+          price: "~NT$ 4,200 ～ 4,800 / đêm",
+          location: "Đi bộ 1 phút đến Ga Hankyu Kyoto-Kawaramachi / 5 phút đến Ga Keihan Gion-Shijo",
+          advantage: "Khách sạn độc đáo kết hợp kiến trúc đền chùa cổ kính, có bồn tắm lớn công cộng sang trọng.",
+          foodHighlight: "🍣 Sushi & 🔥 Thịt nướng siêu tiện lợi: Đi bộ 2 phút ra hẻm Pontocho và phố Kiyamachi, tập trung các quán nổi tiếng: 【Hiro Yakiniku (Shijo Kiyamachi)】、【Mori Mori Sushi】、【Sushi no Musashi Sanjo】 và nhiều quán Izakaya truyền thống."
+        },
+        {
+          name: "HOTEL VISCHIO KYOTO by GRANVIA",
+          enName: "HOTEL VISCHIO KYOTO by GRANVIA",
+          tag: "Cửa Nam Ga Kyoto 🚄",
+          price: "~NT$ 3,800 ～ 4,500 / đêm",
+          location: "Đi bộ 2 phút từ Cửa Hachijo Ga JR Kyoto (Xuống tàu Haruka là đến ngay)",
+          advantage: "Không cần kéo hành lý cồng kềnh chuyển xe, có bồn tắm lớn thư giãn và phòng chờ Lounge miễn phí.",
+          foodHighlight: "🍣 Sushi & 🔥 Thịt nướng siêu tiện lợi: Kết nối trực tiếp khu mua sắm ngầm Porta và phố ẩm thực Hachijo: 【Hiro Yakiniku (Trước Ga Kyoto)】、【Sushi no Musashi (Cửa Hachijo)】、【Tsukiji Sushisay (Tầng ẩm thực Isetan)】."
+        },
+        {
+          name: "Ala Hotel Kyoto",
+          enName: "Ala Hotel Kyoto",
+          tag: "Suối nước nóng Tầng thượng ♨️",
+          price: "~NT$ 3,600 ～ 4,300 / đêm",
+          location: "Đi bộ 4 phút từ Cửa Trung tâm Ga JR Kyoto",
+          advantage: "Khách sạn mới mở đánh giá cao, tầng thượng có bồn tắm lộ thiên ngắm cảnh và phòng xông hơi Sauna.",
+          foodHighlight: "🍣 Sushi & 🔥 Thịt nướng siêu tiện lợi: Đi bộ 3-5 phút đến 【Yakinikuan Megumi】、【Taikougun Yakiniku】 và khu ẩm thực Kyoto Tower SANDO."
+        }
+      ],
+
+      osakaSectionTitle: "🛍️ Khách Sạn Đề Xuất Tại Osaka (5 Đêm: 05/10～10/10 ｜ Gần Ga Nankai Namba & Mua Sắm Quà)",
+      osakaHotels: [
+        {
+          name: "Cross Hotel Osaka",
+          enName: "Cross Hotel Osaka",
+          tag: "Vua Mua Sắm & Quà Lưu Niệm 👑",
+          price: "~NT$ 4,200 ～ 4,800 / đêm",
+          location: "Đi bộ 6-8 phút đến Ga Nankai Namba (đón tàu Rapi:t ra sân bay); 3 phút đến Ga Shinsaibashi",
+          advantage: "Ngay dưới sảnh là phố đi bộ Shinsaibashi và Dotonbori, phòng ốc hiện đại rộng rãi bậc nhất khu vực.",
+          shoppingHighlight: "🎁 Mua quà lưu niệm cực kỳ tiện lợi: Đi bộ 3 phút đến 【Trung tâm Bách hóa Daimaru Shinsaibashi】 (Tầng B1 phố bánh kẹo quà tặng, khoai tây sấy AND THE FRIET, rượu Sake Dassai, Pokemon Center); đi bộ 6 phút đến 【Bách hóa Takashimaya】 (Bánh que Bâton d'or Pocky cao cấp, bánh bông lan Fukusaya, socola Royce); cửa hàng Don Quijote 24h và bánh bao 551 Horai ngay bên cạnh."
+        },
+        {
+          name: "Hotel Gracery Osaka Namba",
+          enName: "Hotel Gracery Osaka Namba",
+          tag: "Sát Ga Nankai Namba Tiện Lợi 🚆",
+          price: "~NT$ 3,200 ～ 3,800 / đêm",
+          location: "Đi bộ chỉ 4-5 phút đến Ga Nankai Namba (kéo vali ra tàu cực kỳ thảnh thơi)",
+          advantage: "Phòng tắm phân tách khô ướt chuẩn Nhật, không gian yên tĩnh và giá cả rất hợp lý.",
+          shoppingHighlight: "🎁 Mua quà lưu niệm cực kỳ tiện lợi: Nằm sát 【Namba CITY】, 【Namba PARKS】 và 【Bách hóa Takashimaya Osaka】, mua sắm xong xách thẳng về phòng cất; đi bộ 3 phút đến cửa hàng Bánh bao 551 Horai và Bánh phô mai Rikuro Ojisan."
+        },
+        {
+          name: "Onyado Nono Namba Natural Hot Spring",
+          enName: "Onyado Nono Namba Natural Hot Spring",
+          tag: "Tắm Khoáng & Chợ Kuromon ♨️",
+          price: "~NT$ 3,900 ～ 4,600 / đêm",
+          location: "Đi bộ 1 phút đến Ga Nippombashi / 7 phút đến Ga Nankai Namba",
+          advantage: "Khách sạn phong cách chiếu cói Tatami truyền thống của tập đoàn Dormy Inn, có suối nước nóng Onsen tự nhiên và mì Ramen đêm miễn phí.",
+          shoppingHighlight: "🎁 Mua quà lưu niệm cực kỳ tiện lợi: Đi bộ 2 phút đến 【Chợ hải sản Kuromon】 và 【Phố dụng cụ bếp Sennichimae】, dạo bộ đến Takashimaya Namba và Dotonbori mua quà rất thuận tiện."
+        }
+      ]
     },
     usj: {
       heroTitle: "🎢 Cẩm nang Trải nghiệm USJ Ngày 06/10/2026 (Thứ Ba)",
