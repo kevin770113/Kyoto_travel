@@ -57,7 +57,7 @@ function renderLanguage(lang) {
   // 3. Tab 1: 每日行程
   renderItinerary(data.days, lang);
 
-  // 4. Tab 2: 航班與住宿卡片
+  // 4. Tab 2: 航班與住宿卡片（包含南海電鐵直達與飯店評比）
   renderBooking(data.booking);
 
   // 5. Tab 3: 環球影城專題（包含全部 11 款快速通關組合）
@@ -148,87 +148,148 @@ function renderItinerary(days, lang) {
   });
 }
 
-// 渲染航班與住宿
+// 渲染航班與住宿（包含南海特急直達機場與精選飯店列表）
 function renderBooking(b) {
   const container = document.getElementById('booking-container');
+
+  // 1. 京都推薦飯店 HTML
+  let kyotoHotelsHtml = '';
+  if (b.kyotoHotels) {
+    b.kyotoHotels.forEach((h) => {
+      kyotoHotelsHtml += `
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-header">
+              <div>
+                <div class="hotel-name">${h.name}</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted);">${h.enName}</div>
+              </div>
+              <span class="hotel-tag kyoto">${h.tag}</span>
+            </div>
+            <div class="hotel-price">${h.price}</div>
+            <div class="hotel-detail-box">
+              <h5>📍 交通位置 (Location)</h5>
+              <p>${h.location}</p>
+            </div>
+            <div class="hotel-detail-box">
+              <h5>✨ 飯店特色 (Features)</h5>
+              <p>${h.advantage}</p>
+            </div>
+            <div class="hotel-detail-box" style="background: #fefce8; border: 1px solid #fef08a;">
+              <h5 style="color: #854d0e;">🍣 晚餐推薦 (Dinner Highlights)</h5>
+              <p style="color: #713f12;">${h.foodHighlight}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  // 2. 大阪推薦飯店 HTML
+  let osakaHotelsHtml = '';
+  if (b.osakaHotels) {
+    b.osakaHotels.forEach((h) => {
+      osakaHotelsHtml += `
+        <div class="hotel-card">
+          <div>
+            <div class="hotel-header">
+              <div>
+                <div class="hotel-name">${h.name}</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted);">${h.enName}</div>
+              </div>
+              <span class="hotel-tag osaka">${h.tag}</span>
+            </div>
+            <div class="hotel-price">${h.price}</div>
+            <div class="hotel-detail-box">
+              <h5>📍 交通位置 (Location)</h5>
+              <p>${h.location}</p>
+            </div>
+            <div class="hotel-detail-box">
+              <h5>✨ 飯店特色 (Features)</h5>
+              <p>${h.advantage}</p>
+            </div>
+            <div class="hotel-detail-box" style="background: #eff6ff; border: 1px solid #bfdbfe;">
+              <h5 style="color: #1e40af;">🎁 伴手禮採買 (Souvenirs & Shopping)</h5>
+              <p style="color: #1e3a8a;">${h.shoppingHighlight}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  }
+
   container.innerHTML = `
-    <div class="grid-2">
-      <!-- Flight Card -->
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">${b.flightCardTitle}</div>
-          <span class="badge-status confirmed">${b.flightStatus}</span>
-        </div>
-        
-        <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px;">${b.outboundLabel}</div>
-        <div class="flight-route">
-          <div class="flight-point">
-            <div class="flight-time">08:15</div>
-            <div class="flight-code">TPE 桃園 T2</div>
-          </div>
-          <div class="flight-arrow">
-            <span>${b.outboundAirline}</span>
-            <span style="font-size: 0.72rem; color: var(--text-muted);">${b.outboundDetail}</span>
-            <span>➔</span>
-          </div>
-          <div class="flight-point">
-            <div class="flight-time">12:00</div>
-            <div class="flight-code">KIX 關西 T1</div>
-          </div>
-        </div>
-
-        <div style="font-size: 0.85rem; color: var(--text-muted); margin: 16px 0 6px;">${b.inboundLabel}</div>
-        <div class="flight-route">
-          <div class="flight-point">
-            <div class="flight-time">14:00</div>
-            <div class="flight-code">KIX 關西 T1</div>
-          </div>
-          <div class="flight-arrow">
-            <span>${b.inboundAirline}</span>
-            <span style="font-size: 0.72rem; color: var(--text-muted);">${b.inboundDetail}</span>
-            <span>➔</span>
-          </div>
-          <div class="flight-point">
-            <div class="flight-time">16:00</div>
-            <div class="flight-code">TPE 桃園 T2</div>
+    <!-- 航班資訊卡片 -->
+    <div class="card" style="margin-bottom: 24px;">
+      <div class="card-header">
+        <div class="card-title">${b.flightCardTitle}</div>
+        <span class="badge-status confirmed">${b.flightStatus}</span>
+      </div>
+      
+      <div class="grid-2" style="gap: 16px;">
+        <div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px;">${b.outboundLabel}</div>
+          <div class="flight-route">
+            <div class="flight-point">
+              <div class="flight-time">08:15</div>
+              <div class="flight-code">TPE 桃園 T2</div>
+            </div>
+            <div class="flight-arrow">
+              <span>${b.outboundAirline}</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">${b.outboundDetail}</span>
+              <span>➔</span>
+            </div>
+            <div class="flight-point">
+              <div class="flight-time">12:00</div>
+              <div class="flight-code">KIX 關西 T1</div>
+            </div>
           </div>
         </div>
 
-        <div style="font-size: 0.85rem; color: var(--text-muted); background: var(--surface-subtle); padding: 10px; border-radius: var(--radius-sm); margin-top: 14px;">
-          ${b.flightTip}
+        <div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px;">${b.inboundLabel}</div>
+          <div class="flight-route">
+            <div class="flight-point">
+              <div class="flight-time">14:00</div>
+              <div class="flight-code">KIX 關西 T1</div>
+            </div>
+            <div class="flight-arrow">
+              <span>${b.inboundAirline}</span>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">${b.inboundDetail}</span>
+              <span>➔</span>
+            </div>
+            <div class="flight-point">
+              <div class="flight-time">16:00</div>
+              <div class="flight-code">TPE 桃園 T2</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Hotel Card -->
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">${b.hotelCardTitle}</div>
-          <span class="badge-status pending">${b.hotelStatus}</span>
-        </div>
+      <div style="font-size: 0.85rem; color: #1e3a8a; background: #eff6ff; border: 1px solid #bfdbfe; padding: 12px; border-radius: var(--radius-sm); margin-top: 14px;">
+        ${b.returnTransitTip || ''}
+      </div>
+    </div>
 
-        <div style="margin-bottom: 18px;">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-            <strong style="color: var(--secondary); font-size: 1rem;">${b.kyotoStayTitle}</strong>
-            <span style="font-size: 0.8rem; color: var(--accent); font-weight: 700;">${b.kyotoDates}</span>
-          </div>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5;">
-            <strong>${b.kyotoArea}</strong><br>
-            ${b.kyotoRecom}
-          </p>
-        </div>
+    <!-- 飯店推薦總覽 -->
+    <div>
+      <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--secondary); margin-bottom: 4px;">
+        ${b.hotelCardTitle}
+      </h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+        ${b.hotelSubTitle}
+      </p>
 
-        <hr style="border: 0; border-top: 1px solid var(--border); margin: 14px 0;">
+      <!-- 京都精選飯店 -->
+      <div class="hotel-section-title">${b.kyotoSectionTitle}</div>
+      <div class="hotel-grid">
+        ${kyotoHotelsHtml}
+      </div>
 
-        <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-            <strong style="color: var(--secondary); font-size: 1rem;">${b.osakaStayTitle}</strong>
-            <span style="font-size: 0.8rem; color: var(--accent); font-weight: 700;">${b.osakaDates}</span>
-          </div>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; line-height: 1.5;">
-            <strong>${b.osakaArea}</strong><br>
-            ${b.osakaRecom}
-          </p>
-        </div>
+      <!-- 大阪精選飯店 -->
+      <div class="hotel-section-title">${b.osakaSectionTitle}</div>
+      <div class="hotel-grid">
+        ${osakaHotelsHtml}
       </div>
     </div>
   `;
