@@ -477,6 +477,94 @@ h1 {
 .flight-code { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }
 .flight-arrow { color: var(--primary); font-weight: 700; font-size: 0.85rem; text-align: center; }
 
+/* 飯店清單與比較卡片 */
+.hotel-section-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--secondary);
+  margin: 28px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.hotel-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hotel-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.hotel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.hotel-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.hotel-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.hotel-tag.kyoto { background: #fef3c7; color: #92400e; }
+.hotel-tag.osaka { background: #e0e7ff; color: #3730a3; }
+
+.hotel-price {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.hotel-detail-box {
+  background: var(--surface-subtle);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.hotel-detail-box h5 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.hotel-detail-box p {
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
 /* 待辦清單與進度條 */
 .checklist-item {
   display: flex;
