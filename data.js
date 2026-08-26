@@ -67,6 +67,171 @@ const i18nData = {
           title: "⚡ 必玩熱門清單",
           desc: "哈利波特禁忌之旅、侏儸紀公園「飛天翼龍」、小小兵瘋狂乘車遊、好萊塢美夢乘車遊。"
         }
+      ],
+      expressSectionTitle: "🎟️ 快速通關 4 項券（Express Pass 4）所有組合總覽",
+      expressSectionSubtitle: "以下整理官方販售之 11 款 4 項快速通關組合，方便您與旅伴挑選最合適的方案：",
+      expressCategories: [
+        {
+          catTitle: "🌟 雙保證入場【瑪利歐 ＋ 哈利波特】（最推薦）",
+          badgeType: "dual",
+          packages: [
+            {
+              name: "Race & JAWS",
+              subname: "最經典全明星首選",
+              badge: "最熱門 ⭐",
+              entry: "保證入場：超級任天堂世界™ ＋ 哈利波特魔法世界™",
+              rides: [
+                "瑪利歐賽車～庫巴的挑戰書～",
+                "哈利波特禁忌之旅™",
+                "小小兵瘋狂乘車遊",
+                "大白鯊™ / 侏儸紀公園-乘船遊™（二擇一）"
+              ],
+              note: "一次玩齊三大經典人氣 IP，首次造訪 USJ 最佳首選！"
+            },
+            {
+              name: "Minecart & JAWS",
+              subname: "任天堂雙旗艦＋哈利波特",
+              badge: "新園區必選 🍄",
+              entry: "保證入場：超級任天堂世界™ ＋ 哈利波特魔法世界™",
+              rides: [
+                "瑪利歐賽車～庫巴的挑戰書～",
+                "咚奇剛瘋狂礦車™（全新擴建設施）",
+                "哈利波特禁忌之旅™ / 飛天翼龍（二擇一）",
+                "大白鯊™ / 侏儸紀公園-乘船遊™（二擇一）"
+              ],
+              note: "一次包攬咚奇剛新礦車＋瑪利歐賽車，任天堂重度粉絲首選！"
+            },
+            {
+              name: "Backdrop & Race",
+              subname: "刺激雲霄飛車組合",
+              badge: "刺激愛好者 🎢",
+              entry: "保證入場：超級任天堂世界™ ＋ 哈利波特魔法世界™",
+              rides: [
+                "瑪利歐賽車～庫巴的挑戰書～",
+                "太空幻想列車",
+                "好萊塢美夢・乘車遊～逆轉世界～",
+                "哈利波特禁忌之旅™ / 飛天翼龍（二擇一）"
+              ],
+              note: "結合倒退式雲霄飛車與瑪利歐、哈利波特，適合追求速度感。"
+            },
+            {
+              name: "Minion & Hollywood Dream",
+              subname: "咚奇剛＋哈利波特＋小小兵",
+              badge: "新設施精選",
+              entry: "保證入場：超級任天堂世界™ ＋ 哈利波特魔法世界™",
+              rides: [
+                "咚奇剛瘋狂礦車™（全新擴建設施）",
+                "哈利波特禁忌之旅™",
+                "小小兵瘋狂乘車遊",
+                "好萊塢美夢・乘車遊 / 大白鯊™（二擇一）"
+              ],
+              note: "主打全新咚奇剛礦車與禁忌之旅，瑪利歐賽車可現場排單人通道。"
+            }
+          ]
+        },
+        {
+          catTitle: "🍄 單保證入場【僅含 超級任天堂世界】（無哈利波特）",
+          badgeType: "mario",
+          packages: [
+            {
+              name: "Minecart & Thrills",
+              subname: "任天堂雙設施＋飛天翼龍",
+              badge: "任天堂極限",
+              entry: "保證入場：超級任天堂世界™",
+              rides: [
+                "瑪利歐賽車～庫巴的挑戰書～",
+                "咚奇剛瘋狂礦車™",
+                "飛天翼龍",
+                "太空幻想列車 / 大白鯊™（二擇一）"
+              ],
+              note: "任天堂雙設施加上全園區最刺激的飛天翼龍！"
+            },
+            {
+              name: "Minecart & Jurassic Park",
+              subname: "溫和親子任天堂雙設施",
+              badge: "親子家庭 👨‍👩‍👧",
+              entry: "保證入場：超級任天堂世界™",
+              rides: [
+                "耀西冒險",
+                "咚奇剛瘋狂礦車™",
+                "小小兵瘋狂乘車遊",
+                "大白鯊™ / 侏儸紀公園-乘船遊™（二擇一）"
+              ],
+              note: "溫和版設施居多，適合親子長輩同遊。"
+            },
+            {
+              name: "Minion & Theater",
+              subname: "小小兵與 4-D 劇場版",
+              badge: "劇場巡禮",
+              entry: "保證入場：超級任天堂世界™",
+              rides: [
+                "耀西冒險",
+                "小小兵瘋狂乘車遊",
+                "小小兵瘋狂任務",
+                "大白鯊™ / 名偵探柯南 4-D 表演秀（二擇一）"
+              ],
+              note: "適合喜愛小小兵與柯南 4-D 劇場表演的旅客。"
+            },
+            {
+              name: "Race & Theater",
+              subname: "瑪利歐賽車＋4-D 劇場",
+              badge: "賽車劇場",
+              entry: "保證入場：超級任天堂世界™",
+              rides: [
+                "瑪利歐賽車～庫巴的挑戰書～",
+                "太空幻想列車",
+                "名偵探柯南 4-D 表演秀",
+                "大白鯊™ / 侏儸紀公園-乘船遊™（二擇一）"
+              ],
+              note: "賽車結合室內沉浸式 4-D 體驗。"
+            }
+          ]
+        },
+        {
+          catTitle: "⚡ 單保證入場【僅含 哈利波特】或【無指定園區】",
+          badgeType: "potter",
+          packages: [
+            {
+              name: "Variety Choice / Fun Ride",
+              subname: "經典哈利波特與溫和設施",
+              badge: "哈利波特專精",
+              entry: "保證入場：哈利波特的魔法世界™",
+              rides: [
+                "哈利波特禁忌之旅™",
+                "鷹馬的飛行™",
+                "小小兵瘋狂乘車遊",
+                "大白鯊™ / 好萊塢美夢・乘車遊（二擇一）"
+              ],
+              note: "包攬哈利波特雙設施，不含任天堂保證入園。"
+            },
+            {
+              name: "Flying Dinosaur & 4-D",
+              subname: "重度刺激與哈利波特",
+              badge: "魔法極限",
+              entry: "保證入場：哈利波特的魔法世界™",
+              rides: [
+                "哈利波特禁忌之旅™",
+                "飛天翼龍",
+                "名偵探柯南 4-D 表演秀",
+                "大白鯊™ / 侏儸紀公園-乘船遊™（二擇一）"
+              ],
+              note: "哈利波特禁忌之旅結合飛天翼龍。"
+            },
+            {
+              name: "Thrills・MAX",
+              subname: "極限尖叫雲霄飛車組合",
+              badge: "尖叫無極限 😱",
+              entry: "保證入場：無指定園區（現場抽整理券）",
+              rides: [
+                "飛天翼龍",
+                "好萊塢美夢・乘車遊～逆轉世界～",
+                "太空幻想列車",
+                "大白鯊™ / 侏儸紀公園-乘船遊™（二擇一）"
+              ],
+              note: "專為雲霄飛車愛好者設計，不含任天堂保證入場。"
+            }
+          ]
+        }
       ]
     },
     checklist: {
@@ -253,8 +418,8 @@ const i18nData = {
           { time: "19:00 - 22:00", title: "唐吉訶德/大國藥妝最後補貨・行李打包整理", desc: "進行免稅藥妝與零食最後採購，回飯店秤重並整理 10 天滿滿戰利品。" }
         ],
         meals: "黑門三平海鮮、HARBS 水果千層蛋糕、一蘭拉麵",
-        transit: "Osaka Metro 地鐵御堂筋線 / 中央線",
-        tips: "液體與凝膠類商品務必放入託運行李，免稅密封袋不可在境內拆封。"
+        transit: "Osaka Metro 地鐵御堂筋線 / Tuyến Chuo",
+        tips: "免稅商品密封袋不可在境內拆封。液體類商品必須放在託運行李。"
       },
       {
         dayNum: 10,
@@ -373,6 +538,171 @@ const i18nData = {
           title: "⚡ Trò chơi Không thể bỏ lỡ",
           desc: "Harry Potter and the Forbidden Journey, Tàu lượn The Flying Dinosaur, Minion Mayhem, Hollywood Dream - The Ride."
         }
+      ],
+      expressSectionTitle: "🎟️ Tổng hợp Tất Cả Các Gói Vé Express Pass 4",
+      expressSectionSubtitle: "Danh sách chi tiết 11 gói vé Express Pass 4 của USJ để bạn và bạn đồng hành dễ dàng so sánh:",
+      expressCategories: [
+        {
+          catTitle: "🌟 Gói Đảm bảo Vào 2 Khu vực【Mario ＋ Harry Potter】(Khuyên dùng nhất)",
+          badgeType: "dual",
+          packages: [
+            {
+              name: "Race & JAWS",
+              subname: "Gói Toàn Ngôi Sao Kinh Điển",
+              badge: "Hot Nhất ⭐",
+              entry: "Đảm bảo vào: Super Nintendo World™ ＋ Harry Potter™",
+              rides: [
+                "Mario Kart: Koopa's Challenge™",
+                "Harry Potter and the Forbidden Journey™",
+                "Despicable Me Minion Mayhem",
+                "JAWS™ / Jurassic Park - The Ride™ (Chọn 1)"
+              ],
+              note: "Trải nghiệm đủ 3 IP nổi tiếng nhất, lựa chọn tối ưu cho chuyến đi đầu tiên!"
+            },
+            {
+              name: "Minecart & JAWS",
+              subname: "Bộ Đôi Nintendo ＋ Harry Potter",
+              badge: "Khu Vực Mới 🍄",
+              entry: "Đảm bảo vào: Super Nintendo World™ ＋ Harry Potter™",
+              rides: [
+                "Mario Kart: Koopa's Challenge™",
+                "Donkey Kong Mine Cart Madness™ (Mới)",
+                "Harry Potter Forbidden Journey™ / The Flying Dinosaur (Chọn 1)",
+                "JAWS™ / Jurassic Park - The Ride™ (Chọn 1)"
+              ],
+              note: "Bao gồm trò chơi mới Donkey Kong và Mario Kart, dành cho fan Nintendo!"
+            },
+            {
+              name: "Backdrop & Race",
+              subname: "Tàu Lượn Siêu Tốc Cảm Giác Mạnh",
+              badge: "Cảm Giác Mạnh 🎢",
+              entry: "Đảm bảo vào: Super Nintendo World™ ＋ Harry Potter™",
+              rides: [
+                "Mario Kart: Koopa's Challenge™",
+                "Space Fantasy The Ride",
+                "Hollywood Dream - The Ride ~Backdrop~",
+                "Harry Potter Forbidden Journey™ / The Flying Dinosaur (Chọn 1)"
+              ],
+              note: "Kết hợp tàu lượn lùi mạo hiểm và 2 khu vực hot nhất."
+            },
+            {
+              name: "Minion & Hollywood Dream",
+              subname: "Donkey Kong ＋ Harry Potter ＋ Minion",
+              badge: "Gói Mới",
+              entry: "Đảm bảo vào: Super Nintendo World™ ＋ Harry Potter™",
+              rides: [
+                "Donkey Kong Mine Cart Madness™ (Mới)",
+                "Harry Potter and the Forbidden Journey™",
+                "Despicable Me Minion Mayhem",
+                "Hollywood Dream - The Ride / JAWS™ (Chọn 1)"
+              ],
+              note: "Trọng tâm là khu vực Donkey Kong mới và Lâu đài Harry Potter."
+            }
+          ]
+        },
+        {
+          catTitle: "🍄 Gói Đảm bảo Vào 1 Khu vực【Chỉ có Super Nintendo World】",
+          badgeType: "mario",
+          packages: [
+            {
+              name: "Minecart & Thrills",
+              subname: "Bộ Đôi Nintendo ＋ The Flying Dinosaur",
+              badge: "Nintendo & Tàu Lượn",
+              entry: "Đảm bảo vào: Super Nintendo World™",
+              rides: [
+                "Mario Kart: Koopa's Challenge™",
+                "Donkey Kong Mine Cart Madness™",
+                "The Flying Dinosaur",
+                "Space Fantasy The Ride / JAWS™ (Chọn 1)"
+              ],
+              note: "Kết hợp 2 trò chơi Nintendo và tàu lượn cảm giác mạnh nhất công viên."
+            },
+            {
+              name: "Minecart & Jurassic Park",
+              subname: "Trò Chơi Nhẹ Nhàng Cho Gia Đình",
+              badge: "Gia Đình 👨‍👩‍👧",
+              entry: "Đảm bảo vào: Super Nintendo World™",
+              rides: [
+                "Yoshi's Adventure™",
+                "Donkey Kong Mine Cart Madness™",
+                "Despicable Me Minion Mayhem",
+                "JAWS™ / Jurassic Park - The Ride™ (Chọn 1)"
+              ],
+              note: "Nhiều trò chơi nhẹ nhàng, phù hợp cho gia đình có trẻ em hoặc người lớn tuổi."
+            },
+            {
+              name: "Minion & Theater",
+              subname: "Minion và Rạp Chiếu Phim 4-D",
+              badge: "Rạp Phim 4-D",
+              entry: "Đảm bảo vào: Super Nintendo World™",
+              rides: [
+                "Yoshi's Adventure™",
+                "Despicable Me Minion Mayhem",
+                "Freeze Ray Sliders",
+                "JAWS™ / Detective Conan 4-D Live Show (Chọn 1)"
+              ],
+              note: "Thích hợp cho người hâm mộ Minion và Conan 4-D."
+            },
+            {
+              name: "Race & Theater",
+              subname: "Mario Kart ＋ Show Conan 4-D",
+              badge: "Đua Xe & 4-D",
+              entry: "Đảm bảo vào: Super Nintendo World™",
+              rides: [
+                "Mario Kart: Koopa's Challenge™",
+                "Space Fantasy The Ride",
+                "Detective Conan 4-D Live Show",
+                "JAWS™ / Jurassic Park - The Ride™ (Chọn 1)"
+              ],
+              note: "Kết hợp Mario Kart với trải nghiệm rạp phim không gian đa chiều."
+            }
+          ]
+        },
+        {
+          catTitle: "⚡ Gói Đảm bảo Vào 1 Khu vực【Chỉ có Harry Potter】hoặc【Không chỉ định】",
+          badgeType: "potter",
+          packages: [
+            {
+              name: "Variety Choice / Fun Ride",
+              subname: "Harry Potter Kinh Điển & Trò Nhẹ",
+              badge: "Harry Potter",
+              entry: "Đảm bảo vào: Harry Potter™",
+              rides: [
+                "Harry Potter and the Forbidden Journey™",
+                "Flight of the Hippogriff™",
+                "Despicable Me Minion Mayhem",
+                "JAWS™ / Hollywood Dream - The Ride (Chọn 1)"
+              ],
+              note: "Bao gồm 2 trò chơi Harry Potter, không bao gồm vé vào cửa đảm bảo Nintendo."
+            },
+            {
+              name: "Flying Dinosaur & 4-D",
+              subname: "Cảm Giác Mạnh ＋ Harry Potter",
+              badge: "Phù Thủy & Tàu Lượn",
+              entry: "Đảm bảo vào: Harry Potter™",
+              rides: [
+                "Harry Potter and the Forbidden Journey™",
+                "The Flying Dinosaur",
+                "Detective Conan 4-D Live Show",
+                "JAWS™ / Jurassic Park - The Ride™ (Chọn 1)"
+              ],
+              note: "Trải nghiệm Harry Potter kết hợp tàu lượn The Flying Dinosaur."
+            },
+            {
+              name: "Thrills・MAX",
+              subname: "Tàu Lượn Cảm Giác Mạnh Tối Đa",
+              badge: "Cảm Giác Cực Mạnh 😱",
+              entry: "Không có vé vào cửa đảm bảo khu vực (Rút vé tại chỗ)",
+              rides: [
+                "The Flying Dinosaur",
+                "Hollywood Dream - The Ride ~Backdrop~",
+                "Space Fantasy The Ride",
+                "JAWS™ / Jurassic Park - The Ride™ (Chọn 1)"
+              ],
+              note: "Dành riêng cho tín đồ mê tàu lượn siêu tốc, không đảm bảo vào Nintendo."
+            }
+          ]
+        }
       ]
     },
     checklist: {
@@ -405,209 +735,6 @@ const i18nData = {
       totalLabel: "Tổng Chi phí Dự kiến (Mỗi người)",
       totalVal: "NT$ 79,000",
       totalNote: "Chi phí thực tế sẽ điều chỉnh theo tỷ giá và chi tiêu thực tế"
-    },
-    days: [
-      {
-        dayNum: 1,
-        dateStr: "01/10 T5",
-        fullDate: "01/10/2026 (Thứ Năm)",
-        city: "Kyoto",
-        cityClass: "kyoto",
-        title: "Ngày 1: Đến Kansai・Di chuyển về Kyoto ngắm cảnh đêm",
-        timeline: [
-          { time: "08:15 - 12:00", title: "Bay chuyến CI156 (Đài Bắc T2 ➔ Kansai T1, A350)", desc: "Ăn trưa trên máy bay. 12:00 hạ cánh Sân bay Kansai, làm thủ tục nhập cảnh, lấy hành lý và nhận vé Haruka." },
-          { time: "13:14 - 14:35", title: "Đi tàu Haruka Express về Ga Kyoto", desc: "Mất khoảng 75-80 phút chạy thẳng về Kyoto, tàu rộng rãi có khoang để hành lý lớn." },
-          { time: "15:00 - 16:30", title: "Check-in khách sạn Kyoto & Cất hành lý", desc: "Khách sạn tại khu vực Shijo Karasuma / Kawaramachi, rất thuận tiện đi lại và ăn uống." },
-          { time: "17:30 - 21:00", title: "Dạo phố Shijo Kawaramachi・Hẻm Pontocho・Bờ sông Kamo", desc: "Dạo bước trên phố cổ lát đá Pontocho, tận hưởng không khí lãng mạn ven sông Kamo và ăn tối món nướng/Izakaya." }
-        ],
-        meals: "Thịt nướng Hiro Yakiniku (Shijo Kiyamachi), Quán ăn Pontocho, Tráng miệng trà xanh Saryo Tsujiri",
-        transit: "Vé điện tử Haruka Express + Tàu điện ngầm Kyoto / Thẻ ICOCA",
-        tips: "Nên chụp màn hình mã QR của Visit Japan Web trước khi lên máy bay để qua cổng hải quan nhanh chóng."
-      },
-      {
-        dayNum: 2,
-        dateStr: "02/10 T6",
-        fullDate: "02/10/2026 (Thứ Sáu)",
-        city: "Kyoto",
-        cityClass: "kyoto",
-        title: "Ngày 2: Cố đô Phía Đông・Chùa Thanh Thủy & Phố Cổ Gion",
-        timeline: [
-          { time: "08:30 - 11:30", title: "Chùa Thanh Thủy (Kiyomizu-dera) & Thác Nước Otowa", desc: "Đi sớm tránh đông đúc, chiêm ngưỡng Điện chính bằng gỗ tráng lệ và uống nước thác Otowa cầu may mắn." },
-          { time: "11:30 - 14:00", title: "Dốc Sannenzaka & Ninenzaka・Ăn trưa phố cổ", desc: "Tản bộ qua các dãy nhà cổ Machiya, ghé các tiệm thủ công truyền thống và ăn trưa đậu phụ Yuransen/mì Soba." },
-          { time: "14:30 - 17:30", title: "Đền Yasaka・Công viên Maruyama・Phố Hanamikoji (Gion)", desc: "Viếng đền Yasaka linh thiêng, chiều muộn dạo phố Hanamikoji tìm hiểu văn hóa Geisha truyền thống." },
-          { time: "18:00 - 20:30", title: "Ngắm cảnh đêm sông Shirakawa Gion・Bữa tối ẩm thực Kyoto", desc: "Đi dạo ven hàng liễu và cầu đá Shirakawa, thưởng thức bữa tối Kaiseki hoặc cơm lươn nướng truyền thống." }
-        ],
-        meals: "Đậu phụ Junsei, Đậu phụ Okutan Kiyomizu, Cơm lươn Gion, Bánh thạch Kudzu Kagizen Yoshifusa",
-        transit: "Xe buýt Kyoto số 207 / 206 hoặc taxi đoạn ngắn",
-        tips: "Khu vực Ninenzaka/Sannenzaka nhiều bậc thang dốc, nên mang giày đi bộ êm ái chống trơn trượt."
-      },
-      {
-        dayNum: 3,
-        dateStr: "03/10 T7",
-        fullDate: "03/10/2026 (Thứ Bảy)",
-        city: "Kyoto",
-        cityClass: "kyoto",
-        title: "Ngày 3: Ngàn Cổng Torii・Chợ Nishiki・Chùa Vàng Kinkaku-ji",
-        timeline: [
-          { time: "08:00 - 10:30", title: "Đền Fushimi Inari Taisha (Ngàn cổng Torii buổi sáng)", desc: "Đi tàu JR Nara lúc sáng sớm để tận hưởng không gian huyền bí của hàng ngàn cổng Torii đỏ thắm." },
-          { time: "11:30 - 14:00", title: "Khám phá Ẩm thực Chợ Nishiki (Nhà bếp Kyoto)", desc: "Thưởng thức bánh rán sữa đậu nành, hải sản nướng than, trứng cuộn Tamagoyaki và xiên que đường phố." },
-          { time: "14:30 - 17:00", title: "Chùa Vàng Kinkaku-ji hoặc Lâu đài Nijo", desc: "Ngắm nhìn ngôi chùa dát vàng rực rỡ soi bóng xuống mặt hồ Kyoko-chi tuyệt đẹp." },
-          { time: "18:00 - 20:30", title: "Dạo Trung tâm thương mại ShinPuhKan・Ăn tối Tempura", desc: "Khu phức hợp kiến trúc độc đáo của Kengo Kuma, thưởng thức cơm Tempura giòn tan." }
-        ],
-        meals: "Trứng cuộn Miki Keiran, Bánh sữa đậu nành Konnamonja, Cơm lươn Nezameya",
-        transit: "Tàu JR Nara Line + Tàu điện ngầm / Xe buýt Kyoto",
-        tips: "Nếu không leo hết đỉnh núi Inari, có thể đi đến ngã tư Yotsutsuji ngắm toàn cảnh thành phố rồi quay lại."
-      },
-      {
-        dayNum: 4,
-        dateStr: "04/10 CN",
-        fullDate: "04/10/2026 (Chủ Nhật)",
-        city: "Kyoto",
-        cityClass: "kyoto",
-        title: "Ngày 4: Thung lũng Arashiyama・Rừng Trúc & Cầu Togetsukyo",
-        timeline: [
-          { time: "09:00 - 10:30", title: "Tàu hỏa ngắm cảnh lãng mạn Sagano (Torokko)", desc: "Tàu hỏa chạy men theo hẻm núi Hozugawa, ngắm nhìn phong cảnh thiên nhiên thung lũng." },
-          { time: "10:30 - 13:00", title: "Rừng trúc Arashiyama・Đền Nonomiya・Chùa Tenryu-ji", desc: "Dạo bước giữa rừng trúc xanh ngắt, viếng đền cầu duyên Nonomiya và vườn cảnh Tenryu-ji." },
-          { time: "13:30 - 16:30", title: "Cầu Togetsukyo・Cà phê % Arabica・Ngâm chân suối khoáng", desc: "Ngắm sông Katsura bên cầu Togetsukyo, uống cà phê % Arabica nổi tiếng và ngâm chân tại Ga Randen." },
-          { time: "18:00 - 20:30", title: "Về trung tâm Kyoto・Bữa tối lẩu Shabu-shabu・Chuẩn bị hành lý", desc: "Ăn tối món lẩu ấm cúng, về khách sạn sắp xếp đồ đạc chuẩn bị chuyển sang Osaka ngày mai." }
-        ],
-        meals: "Cà phê % Arabica Arashiyama, Cơm lươn Hirokawa (cần đặt trước), Bánh thịt chiên Nakamura",
-        transit: "Tàu JR Sagano Line / Tàu điện Randen",
-        tips: "Vé tàu Torokko nên đặt online trước 1 tháng để chọn được khoang số 5 ngắm cảnh đẹp nhất."
-      },
-      {
-        dayNum: 5,
-        dateStr: "05/10 T2",
-        fullDate: "05/10/2026 (Thứ Hai)",
-        city: "Osaka",
-        cityClass: "osaka",
-        title: "Ngày 5: Trà xanh Uji ➔ Di chuyển đến Osaka・Phố Đèn Dotonbori",
-        timeline: [
-          { time: "09:30 - 12:30", title: "Chùa Byodoin Phượng Hoàng Uji・Dạo bờ sông Uji", desc: "Check-out khách sạn, đi Uji viếng ngôi chùa nghìn năm Byodoin in trên đồng xu 10 Yên Nhật." },
-          { time: "12:30 - 14:30", title: "Thưởng thức Trà xanh & Bữa trưa tại Nakamura Tokichi", desc: "Thưởng thức thạch trà xanh tươi mát, mì Soba trà xanh và kem Matcha thượng hạng." },
-          { time: "15:00 - 16:30", title: "Di chuyển đến Osaka・Check-in Khách sạn Osaka", desc: "Đi tàu Keihan/JR về Osaka, nhận phòng tại Namba / Shinsaibashi (ở liên tục 5 đêm)." },
-          { time: "17:30 - 21:30", title: "Phố đi bộ Shinsaibashi・Biển hiệu Glico Dotonbori・Ăn tối", desc: "Hòa mình vào khu phố sầm uất nhất Osaka, chụp ảnh với biển hiệu Glico Man, ăn bánh xèo và Takoyaki." }
-        ],
-        meals: "Matcha Nakamura Tokichi, Bánh xèo Mizuno Okonomiyaki, Takoyaki Juhachiban, Xiên que Kushikatsu Daruma",
-        transit: "Tàu JR Nara Line + Tàu Keihan / Tàu điện ngầm Midosuji Osaka",
-        tips: "Ngày chuyển khách sạn có thể gửi hành lý tại tủ gửi đồ ở ga hoặc dùng dịch vụ chuyển phát hành lý."
-      },
-      {
-        dayNum: 6,
-        dateStr: "06/10 T3",
-        fullDate: "06/10/2026 (Thứ Ba)",
-        city: "USJ",
-        cityClass: "usj",
-        title: "Ngày 6: Universal Studios Japan (USJ) Trọn Ngày Tuyệt Vời 🌟",
-        timeline: [
-          { time: "07:00 - 08:00", title: "Khởi hành sớm đến cổng USJ xếp hàng vào cổng", desc: "Công viên thường mở cửa sớm hơn 30-45 phút so với giờ công bố, đến sớm để vào đợt đầu." },
-          { time: "08:30 - 12:00", title: "Super Nintendo World (Mario Kart & Khu Donkey Kong)", desc: "Đeo Vòng tay Năng lượng đập khối gạch ăn xu, đua xe Mario Kart tại Lâu đài Bowser và tàu lượn Donkey Kong!" },
-          { time: "12:30 - 14:00", title: "Ăn trưa theo chủ đề Nấm tại Kinopio's Cafe", desc: "Thưởng thức bát Pizza Nấm, cơm Ngôi Sao May Mắn, tráng miệng bánh Tiramisu và chụp ảnh check-in." },
-          { time: "14:00 - 17:30", title: "Thế giới Phù thủy Harry Potter・Minion Park・The Flying Dinosaur", desc: "Uống bia bơ mát lạnh, trải nghiệm Forbidden Journey 4K và thử thách tàu lượn siêu tốc The Flying Dinosaur." },
-          { time: "18:30 - 21:00", title: "Lâu đài Hogwarts lên đèn・Mua quà lưu niệm・Trở về", desc: "Chụp ảnh lâu đài Hogwarts lung linh về đêm, mua bình bỏng ngô Mario/Minion giới hạn." }
-        ],
-        meals: "Quán Kinopio's Cafe, Bia bơ Quán Ba Cây Chổi, Bỏng ngô Minion",
-        transit: "Tàu JR Osaka Loop Line ➔ Ga Nishikujo đổi tàu JR Yumesaki Line ➔ Ga Universal City",
-        tips: "Đi vào Thứ Ba trong tuần vắng hơn cuối tuần! Nhớ mua vé Express Pass trước 2 tháng."
-      },
-      {
-        dayNum: 7,
-        dateStr: "07/10 T4",
-        fullDate: "07/10/2026 (Thứ Tư)",
-        city: "Osaka",
-        cityClass: "osaka",
-        title: "Ngày 7: Lâu đài Osaka・Phố cổ Shinsekai・Ngắm Cảnh đêm Umeda",
-        timeline: [
-          { time: "09:30 - 12:00", title: "Công viên Lâu đài Osaka・Lên Tháp Lâu đài", desc: "Lên đỉnh lâu đài ngắm toàn cảnh thành phố, tìm hiểu lịch sử thời Chiến Quốc của Toyotomi Hideyoshi." },
-          { time: "12:30 - 15:30", title: "Khu phố Shinsekai・Tháp Tsutenkaku (Cầu trượt)・Ăn xiên que", desc: "Trải nghiệm không gian hoài cổ thập niên Showa, thử cầu trượt Tower Slider, ăn xiên que chiên giòn." },
-          { time: "16:30 - 18:30", title: "Mua sắm khu phức hợp Umeda (Grand Front / Hankyu)", desc: "Mua sắm tại trung tâm thương mại lớn nhất Kansai, chọn quà lưu niệm và đồ thời trang Nhật Bản." },
-          { time: "18:30 - 21:00", title: "Tòa nhà Umeda Sky Building・Đài quan sát ngắm cảnh đêm 360°", desc: "Lên đài quan sát ngoài trời ngắm triệu ánh đèn lung linh của Osaka, ăn tối bánh xèo Kiji." }
-        ],
-        meals: "Xiên que Yaekatsu / Daruma, Bánh xèo Kiji (Chi nhánh Umeda Sky)",
-        transit: "Vé 1 ngày Tàu điện ngầm Osaka Metro 1-Day Pass",
-        tips: "Đài quan sát Umeda Sky đẹp nhất lúc hoàng hôn chuyển sang đêm, nên lên sớm chọn góc đẹp."
-      },
-      {
-        dayNum: 8,
-        dateStr: "08/10 T5",
-        fullDate: "08/10/2026 (Thứ Năm)",
-        city: "Nara",
-        cityClass: "osaka",
-        title: "Ngày 8: Cố đô Nara・Tương tác Hươu sao & Đại Phật Chùa Todai-ji",
-        timeline: [
-          { time: "09:00 - 10:00", title: "Đi tàu Kintetsu Rapid Express (Osaka Namba ➔ Kintetsu Nara)", desc: "Chỉ mất khoảng 35-40 phút chạy thẳng đến Nara, ra khỏi ga là đến phố đi bộ và công viên." },
-          { time: "10:00 - 12:30", title: "Cho hươu ăn tại Công viên Nara・Chùa Todai-ji", desc: "Mua bánh Senbei cho hươu ăn thân thiện, chiêm ngưỡng tượng Đại Phật uy nghiêm trong ngôi chùa gỗ lớn nhất thế giới." },
-          { time: "13:00 - 14:30", title: "Ăn trưa phố cổ Naramachi・Bánh dày giã tay Nakatanidou", desc: "Thưởng thức cơm niêu Shizuka Kamameshi nóng hổi, xem biểu diễn giã bánh dày siêu tốc Nakatanidou." },
-          { time: "14:30 - 16:30", title: "Đền Kasuga Taisha & Rừng cây nguyên sinh", desc: "Dạo bước giữa rừng cây cổ thụ và 3.000 chiếc đèn lồng đá rêu phong cổ kính." },
-          { time: "18:00 - 20:30", title: "Về lại Namba Osaka・Thịt nướng bò Nhật Bản Buffet", desc: "Tự thưởng bữa tối Buffet thịt nướng cao cấp Aburiya sau ngày dài đi bộ khám phá." }
-        ],
-        meals: "Cơm niêu Shizuka Kamameshi, Bánh dày lá ngải cứu Nakatanidou, Bò nướng Aburiya Namba",
-        transit: "Vé tàu Kintetsu một chiều / Thẻ Nara-Ikaruga 1-Day Pass",
-        tips: "Khi cho hươu ăn nên cầm từng miếng nhỏ, chú ý giữ túi xách và đồ đạc cẩn thận."
-      },
-      {
-        dayNum: 9,
-        dateStr: "09/10 T6",
-        fullDate: "09/10/2026 (Thứ Sáu)",
-        city: "Osaka",
-        cityClass: "osaka",
-        title: "Ngày 9: Thủy cung Kaiyukan/Phố cổ Nakazakicho・Phố Cam Orange Street",
-        timeline: [
-          { time: "09:30 - 12:30", title: "Thủy cung Kaiyukan (Cá mập voi) hoặc Phố cổ Nakazakicho", desc: "Khám phá thế giới đại dương tuyệt đẹp hoặc dạo các con hẻm cổ kính thưởng thức cà phê rang xay." },
-          { time: "12:30 - 15:00", title: "Hải sản tươi sống Chợ Kuromon & Đền Đầu Sư Tử Namba Yasaka", desc: "Nếm thử nhím biển, cá ngừ Otoro và ghé đền đầu sư tử khổng lồ cầu may mắn." },
-          { time: "15:30 - 18:30", title: "Dạo phố thời trang Orange Street (Minamihorie)", desc: "Khu phố tập trung các thương hiệu streetwear như Supreme, BAPE, đồ Vintage và nội thất hiện đại." },
-          { time: "19:00 - 22:00", title: "Mua sắm miễn thuế Don Quijote・Đóng gói hành lý", desc: "Mua sắm mỹ phẩm, bánh kẹo miễn thuế lần cuối, về phòng cân hành lý và sắp xếp đồ đạc." }
-        ],
-        meals: "Hải sản Kuromon Sanpei, Bánh crepe HARBS, Mì ramen Ichiran",
-        transit: "Tàu điện ngầm Osaka Metro Tuyến Midosuji / Tuyến Chuo",
-        tips: "Hàng miễn thuế đóng gói trong túi niêm phong không được mở ra tại Nhật. Đồ dạng lỏng phải để ở hành lý ký gửi."
-      },
-      {
-        dayNum: 10,
-        dateStr: "10/10 T7",
-        fullDate: "10/10/2026 (Thứ Bảy)",
-        city: "Về nước",
-        cityClass: "osaka",
-        title: "Ngày 10: Tạm biệt Nhật Bản・Khởi hành về nước từ Sân bay KIX",
-        timeline: [
-          { time: "09:30 - 10:30", title: "Check-out khách sạn・Đến Ga Namba", desc: "Thong thả ăn sáng, trả phòng khách sạn và đi bộ ra Ga Nankai Namba đón tàu." },
-          { time: "10:30 - 11:15", title: "Đi tàu tốc hành Nankai Rapi:t ra Sân bay Kansai", desc: "Khoảng 38 phút chạy thẳng đến Nhà ga T1 Sân bay Quốc tế Kansai (KIX)." },
-          { time: "11:30 - 13:30", title: "Làm thủ tục gửi hành lý・Mua sắm miễn thuế sân bay", desc: "Gửi hành lý trước 2.5 tiếng, mua sắm bánh Shiroi Koibito, socola tươi Royce, Tokyo Banana miễn thuế." },
-          { time: "14:00 - 16:00", title: "Chuyến bay CI153 cất cánh (A350)・Hạ cánh Sân bay Đào Viên T2", desc: "Hạ cánh an toàn tại Đài Bắc, kết thúc chuyến du lịch 10 ngày tuyệt vời tại Kansai!" }
-        ],
-        meals: "Khu ẩm thực Sân bay Kansai, Mì Kamukura Ramen, Bánh trà xanh sân bay",
-        transit: "Tàu tốc hành Nankai Rapi:t ghế đặt trước",
-        tips: "Chuyến bay CI153 cất cánh lúc 14:00, cần có mặt tại cửa khởi hành trước 13:20."
-      }
-    ],
-    printDoc: {
-      title: "TRAVEL ITINERARY / LỊCH TRÌNH DU LỊCH",
-      subtitle: "Japan Kansai Trip (Kyoto & Osaka 10 Days 9 Nights)",
-      infoNameLabel: "Họ tên Khách (Traveler):",
-      infoNameVal: "Chuang Shih-hsien & Partner",
-      infoDateLabel: "Thời gian (Dates):",
-      infoDateVal: "01/10/2026 – 10/10/2026 (10 Ngày 9 Đêm)",
-      infoFlightLabel: "Chuyến bay (Flights):",
-      infoFlightVal: "Đi: CI156 (01/10 08:15 TPE ➔ 12:00 KIX) | Về: CI153 (10/10 14:00 KIX ➔ 16:00 TPE)",
-      infoPurposeLabel: "Mục đích (Purpose):",
-      infoPurposeVal: "Du lịch tự túc (Sightseeing / Tourism)",
-      colDate: "Ngày (Date)",
-      colCity: "Khu vực (Area)",
-      colPlan: "Hoạt động & Lịch trình dự kiến (Planned Schedule)",
-      colHotel: "Nơi lưu trú & Liên hệ (Accommodation)",
-      printRows: [
-        { date: "01/10 (T5)", city: "Osaka (KIX) ➔ Kyoto", plan: "Chuyến bay CI156 (08:15-12:00) đến KIX. Đi tàu Haruka về Kyoto. Nhận phòng. Dạo hẻm Pontocho & Sông Kamo.", hotel: "Kyoto Hotel\n(Khu Shijo Karasuma / Kawaramachi)\nTel: +81-75-xxx-xxxx" },
-        { date: "02/10 (T6)", city: "Kyoto", plan: "Chùa Thanh Thủy (Kiyomizu-dera), Dốc Sannenzaka & Ninenzaka, Đền Yasaka, Phố cổ Gion Hanamikoji, Sông Shirakawa.", hotel: "Kyoto Hotel\n(Như trên)" },
-        { date: "03/10 (T7)", city: "Kyoto", plan: "Đền Fushimi Inari (Ngàn cổng Torii), Khám phá ẩm thực Chợ Nishiki, Chùa Vàng Kinkaku-ji, ShinPuhKan.", hotel: "Kyoto Hotel\n(Như trên)" },
-        { date: "04/10 (CN)", city: "Kyoto (Arashiyama)", plan: "Tàu hỏa lãng mạn Sagano, Rừng trúc Arashiyama, Chùa Tenryu-ji, Cầu Togetsukyo, Cà phê % Arabica.", hotel: "Kyoto Hotel\n(Như trên)" },
-        { date: "05/10 (T2)", city: "Kyoto ➔ Osaka", plan: "Tham quan Chùa Byodoin Uji, Thưởng thức Matcha. Chiều chuyển sang Osaka. Phố đi bộ Dotonbori & Shinsaibashi.", hotel: "Osaka Hotel\n(Khu Namba / Shinsaibashi / Umeda)\nTel: +81-6-xxx-xxxx" },
-        { date: "06/10 (T3)", city: "Osaka (USJ)", plan: "Vui chơi trọn ngày Universal Studios Japan (Super Nintendo World, Donkey Kong, Harry Potter, Jurassic Park).", hotel: "Osaka Hotel\n(Như trên)" },
-        { date: "07/10 (T4)", city: "Osaka", plan: "Công viên Lâu đài Osaka, Phố cổ Shinsekai & Tháp Tsutenkaku, Đài quan sát Umeda Sky Building ngắm cảnh đêm.", hotel: "Osaka Hotel\n(Như trên)" },
-        { date: "08/10 (T5)", city: "Nara (Trong ngày)", plan: "Đi trong ngày đến Nara: Công viên Hươu Nara, Đại Phật Chùa Todai-ji, Đền Kasuga Taisha. Tối về Osaka ăn thịt nướng.", hotel: "Osaka Hotel\n(Như trên)" },
-        { date: "09/10 (T6)", city: "Osaka", plan: "Thủy cung Kaiyukan Osaka / Phố cổ Nakazakicho, Chợ Kuromon, Dạo phố thời trang Orange Street, Đóng gói hành lý.", hotel: "Osaka Hotel\n(Như trên)" },
-        { date: "10/10 (T7)", city: "Osaka ➔ TPE", plan: "Check-out khách sạn. Đi tàu Nankai Rapi:t ra Sân bay KIX. Chuyến bay CI153 (14:00-16:00) về Đài Bắc.", hotel: "Chuyến bay về CI153\n(Về lại Đài Loan)" }
-      ],
-      footerNote: "* Lịch trình này được lập cho mục đích xin visa và kế hoạch du lịch cá nhân. Mọi chi tiết vé máy bay và khách sạn căn cứ theo xác nhận thực tế."
     }
   }
 };
