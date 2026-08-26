@@ -60,7 +60,7 @@ function renderLanguage(lang) {
   // 4. Tab 2: 航班與住宿卡片
   renderBooking(data.booking);
 
-  // 5. Tab 3: 環球影城專題
+  // 5. Tab 3: 環球影城專題（包含全部 11 款快速通關組合）
   renderUSJ(data.usj);
 
   // 6. Tab 4: 行前待辦清單
@@ -148,7 +148,7 @@ function renderItinerary(days, lang) {
   });
 }
 
-// 渲染航班與住宿（完整呈現去回程 CI156/CI153 與京都4晚/大阪5晚）
+// 渲染航班與住宿
 function renderBooking(b) {
   const container = document.getElementById('booking-container');
   container.innerHTML = `
@@ -234,7 +234,7 @@ function renderBooking(b) {
   `;
 }
 
-// 渲染 USJ 專題
+// 渲染 USJ 專題與所有 11 款快速通關組合
 function renderUSJ(u) {
   const container = document.getElementById('usj-container');
   let tipsHtml = '';
@@ -247,6 +247,51 @@ function renderUSJ(u) {
     `;
   });
 
+  let expressSectionsHtml = '';
+  if (u.expressCategories) {
+    u.expressCategories.forEach((cat) => {
+      let cardsHtml = '';
+      cat.packages.forEach((pkg) => {
+        let ridesListHtml = '';
+        pkg.rides.forEach((r, idx) => {
+          ridesListHtml += `<li><span class="bullet">${idx + 1}.</span> <span>${r}</span></li>`;
+        });
+
+        const isRecommended = cat.badgeType === 'dual';
+
+        cardsHtml += `
+          <div class="express-card ${isRecommended ? 'recommended' : ''}">
+            <div>
+              <div class="express-header">
+                <div>
+                  <div class="express-name">${pkg.name}</div>
+                  <div class="express-subname">${pkg.subname}</div>
+                </div>
+                <span class="express-badge ${cat.badgeType}">${pkg.badge}</span>
+              </div>
+              <div style="font-size: 0.78rem; font-weight: 700; color: var(--accent); margin-bottom: 6px;">
+                🎟️ ${pkg.entry}
+              </div>
+              <ul class="express-rides">
+                ${ridesListHtml}
+              </ul>
+            </div>
+            <div class="express-note">
+              💡 ${pkg.note}
+            </div>
+          </div>
+        `;
+      });
+
+      expressSectionsHtml += `
+        <div class="express-cat-title">${cat.catTitle}</div>
+        <div class="express-grid">
+          ${cardsHtml}
+        </div>
+      `;
+    });
+  }
+
   container.innerHTML = `
     <div class="usj-hero">
       <h3>${u.heroTitle}</h3>
@@ -254,6 +299,16 @@ function renderUSJ(u) {
       <div class="usj-tips-grid">
         ${tipsHtml}
       </div>
+    </div>
+
+    <div class="express-section">
+      <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--secondary); margin-bottom: 4px;">
+        ${u.expressSectionTitle || '🎟️ 快速通關 4 項券（Express Pass 4）所有組合總覽'}
+      </h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+        ${u.expressSectionSubtitle || ''}
+      </p>
+      ${expressSectionsHtml}
     </div>
   `;
 }
