@@ -847,6 +847,209 @@ const i18nData = {
       totalLabel: "Tổng Chi phí Dự kiến (Mỗi người)",
       totalVal: "NT$ 79,000",
       totalNote: "Chi phí thực tế sẽ điều chỉnh theo tỷ giá và chi tiêu thực tế"
+    },
+    days: [
+      {
+        dayNum: 1,
+        dateStr: "01/10 T5",
+        fullDate: "01/10/2026 (Thứ Năm)",
+        city: "Kyoto",
+        cityClass: "kyoto",
+        title: "Ngày 1: Khởi hành đến Kansai・Tiến thẳng ngắm cảnh đêm Kyoto",
+        timeline: [
+          { time: "08:15 - 12:00", title: "Đón chuyến bay China Airlines CI156 (Đài Bắc T2 ➔ Kansai T1, A350)", desc: "Thưởng thức suất ăn trên máy bay, 12:00 hạ cánh đúng giờ tại sân bay Kansai làm thủ tục nhập cảnh, lấy hành lý và vé tàu Haruka." },
+          { time: "13:14 - 14:35", title: "Đi tàu tốc hành Haruka chạy thẳng đến ga Kyoto", desc: "Khoảng 75~80 phút đến thẳng Kyoto, toa xe rộng rãi thoải mái có giá để hành lý lớn." },
+          { time: "15:00 - 16:30", title: "Nhận phòng khách sạn ở Kyoto và cất hành lý", desc: "Nhận phòng quanh khu Shijo Karasuma / Kawaramachi, giao thông và tiện ích sinh hoạt tiện lợi." },
+          { time: "17:30 - 21:00", title: "Shijo Kawaramachi・Đường lát đá Pontocho・Bữa tối ngắm cảnh đêm sông Kamo", desc: "Tản bộ qua các con hẻm cổ Pontocho, tận hưởng bầu không khí thư thái bên bờ sông Kamo, thưởng thức ẩm thực Kyoto hoặc quán thịt nướng Izakaya." }
+        ],
+        meals: "Thịt nướng Hiro (chi nhánh Shijo Kiyamachi), quán Izakaya ở Pontocho, món tráng miệng Matcha Saryo Tsujiri",
+        transit: "Vé điện tử tàu tốc hành Haruka + Tàu điện ngầm Kyoto / Thẻ ICOCA",
+        tips: "Trước khi khởi hành, vui lòng đảm bảo đã chụp màn hình mã QR Visit Japan Web để qua cổng hải quan thuận lợi hơn."
+      },
+      {
+        dayNum: 2,
+        dateStr: "02/10 T6",
+        fullDate: "02/10/2026 (Thứ Sáu)",
+        city: "Kyoto",
+        cityClass: "kyoto",
+        title: "Ngày 2: Tham quan phía Đông Kyoto・Phố cổ & Gion",
+        timeline: [
+          { time: "08:30 - 11:30", title: "Chùa Kiyomizu-dera・Sân khấu Kiyomizu・Cầu nguyện tại thác Otowa", desc: "Khởi hành sớm tránh đám đông, tham quan sân khấu bằng gỗ hùng vĩ Kiyomizu, cầu nguyện sức khỏe, học tập hoặc tình duyên tại thác Otowa." },
+          { time: "11:30 - 14:00", title: "Dạo bước Sannenzaka・Ninenzaka・Ăn trưa", desc: "Tản bộ trên những con dốc cổ kính được bảo tồn tốt, tham quan các quán trà và cửa hàng thủ công mỹ nghệ đặc sắc, thưởng thức đậu phụ luộc (Yudofu) hoặc mì Soba truyền thống." },
+          { time: "14:30 - 17:30", title: "Đền Yasaka・Công viên Maruyama・Phố Hanamikoji (Gion)", desc: "Viếng đền Yasaka trấn giữ Kyoto, chiều tối len lỏi qua phố Hanamikoji khám phá văn hóa quán trà Geisha và kiến trúc gỗ cổ." },
+          { time: "18:00 - 20:30", title: "Cảnh đêm Gion Shirakawa・Bữa tối Kaiseki tinh tế", desc: "Chiêm ngưỡng cảnh đêm rặng liễu rủ và dòng suối cầu đá Shirakawa, thưởng thức ẩm thực Kaiseki tinh tế hoặc cơm lươn trăm năm." }
+        ],
+        meals: "Đậu phụ luộc Junsei, Okutan Kiyomizu, Cơm lươn Gion, Món tráng miệng đường đen Kagizen Yoshifusa",
+        transit: "Xe buýt thành phố Kyoto số 207 / 206 hoặc taxi quãng ngắn",
+        tips: "Đường dốc đá Ninenzaka và Sannenzaka khá nhiều, nên mang giày đi bộ chống trượt thoải mái."
+      },
+      {
+        dayNum: 3,
+        dateStr: "03/10 T7",
+        fullDate: "03/10/2026 (Thứ Bảy)",
+        city: "Kyoto",
+        cityClass: "kyoto",
+        title: "Ngày 3: Vẻ đẹp ngàn cổng Torii・Nhà bếp chợ Nishiki・Kinkaku-ji",
+        timeline: [
+          { time: "08:00 - 10:30", title: "Đền Fushimi Inari Taisha (Ngàn cổng Torii sáng sớm)", desc: "Đi tuyến JR Nara đến nơi vào sáng sớm, tận hưởng vẻ đẹp tĩnh lặng của những chiếc cổng Torii đỏ thắm trong nắng mai, tản bộ đến ngã tư Yotsutsuji ngắm nhìn toàn cảnh thành phố." },
+          { time: "11:30 - 14:00", title: "Khám phá ẩm thực Chợ Nishiki 'Nhà bếp của Kyoto'", desc: "Thưởng thức bánh rán sữa đậu nành, hải sản nướng, trứng cuộn Tamagoyaki, xiên que tươi sống trăm năm tuổi." },
+          { time: "14:30 - 17:00", title: "Chùa Vàng (Kinkaku-ji) hoặc Vườn lâu đài Nijo", desc: "Chiêm ngưỡng hình bóng Xá Lợi Điện dát vàng rực rỡ phản chiếu trên mặt hồ Kyoko-chi, cảm nhận vẻ đẹp khu vườn thiền di sản thế giới." },
+          { time: "18:00 - 20:30", title: "Dạo chơi khu thương mại ShinPuhKan・Bữa tối Tempura kiểu Nhật", desc: "Ghé thăm khu thương mại sáng tạo kiến trúc gạch đỏ lịch sử do Kengo Kuma thiết kế, thưởng thức cơm Tempura giòn rụm hoặc món Âu kiểu Nhật." }
+        ],
+        meals: "Trứng cuộn Miki Keiran chợ Nishiki, bánh rán sữa đậu nành Konnamonja, lươn nướng Nezameya",
+        transit: "Tuyến JR Nara + Tàu điện ngầm / Xe buýt thành phố Kyoto",
+        tips: "Đường mòn lên núi Fushimi Inari khá dài, có thể quay lại tại Yotsutsuji tùy theo thể lực để dành sức cho buổi chiều."
+      },
+      {
+        dayNum: 4,
+        dateStr: "04/10 CN",
+        fullDate: "04/10/2026 (Chủ Nhật)",
+        city: "Kyoto",
+        cityClass: "kyoto",
+        title: "Ngày 4: Sagano Arashiyama・Rừng tre & Cầu Togetsukyo",
+        timeline: [
+          { time: "09:00 - 10:30", title: "Tàu lượn ngắm cảnh Sagano (Đường sắt cổ Torokko)", desc: "Chạy dọc theo thung lũng sông Hozugawa, ngắm nhìn phong cảnh thanh bình của núi rừng đầu thu và dòng suối." },
+          { time: "10:30 - 13:00", title: "Đường mòn rừng tre Arashiyama・Đền Nonomiya・Vườn chùa Tenryu-ji", desc: "Tản bộ dưới đường hầm trúc xanh ngát cao vút, viếng đền Nonomiya cầu duyên, tham quan hồ Sogenchi di sản thế giới chùa Tenryu-ji." },
+          { time: "13:30 - 16:30", title: "Dạo quanh cầu Togetsukyo・Cà phê % Arabica・Ngâm chân ga Randen", desc: "Ngắm cảnh sông Katsura bên cầu Togetsukyo, thưởng thức cà phê % Arabica siêu nổi tiếng, ngâm chân thư giãn tại ga Randen Arashiyama." },
+          { time: "18:00 - 20:30", title: "Trở về trung tâm thành phố・Bữa tối lẩu phong cách Kyoto・Sắp xếp hành lý", desc: "Thưởng thức lẩu Shabu-shabu Kyoto ấm áp, về khách sạn sắp xếp hành lý, chuẩn bị di chuyển đến Osaka vào ngày mai." }
+        ],
+        meals: "% Arabica Kyoto Arashiyama, Cơm lươn Hirokawa, Bánh Croquette Nakamuraya",
+        transit: "Tuyến JR Sagano / Đường sắt Keifuku (Randen)",
+        tips: "Khuyên bạn nên đặt vé tàu lượn trực tuyến trước 1 tháng cho các khung giờ cao điểm."
+      },
+      {
+        dayNum: 5,
+        dateStr: "05/10 T2",
+        fullDate: "05/10/2026 (Thứ Hai)",
+        city: "Osaka",
+        cityClass: "osaka",
+        title: "Ngày 5: Văn hóa trà Uji ➔ Di chuyển đến Osaka・Đêm Dotonbori",
+        timeline: [
+          { time: "09:30 - 12:30", title: "Phượng Hoàng Đường chùa Byodo-in ở Uji・Dạo bước phong cách cổ quanh Đền Uji", desc: "Sau khi trả phòng, đến Uji tham quan Phượng Hoàng Đường quốc bảo ngàn năm in trên đồng 10 Yên và ngắm cảnh sông Uji." },
+          { time: "12:30 - 14:30", title: "Nakamura Tokichi chi nhánh Byodo-in Thưởng thức bữa trưa và tráng miệng Matcha hảo hạng", desc: "Thưởng thức thạch trà xanh Uji Matcha tươi trứ danh, set mì Soba Matcha và Parfait Matcha đặc biệt." },
+          { time: "15:00 - 16:30", title: "Di chuyển đến Osaka・Nhận phòng khách sạn Osaka", desc: "Đi tàu điện Keihan hoặc JR đến Osaka, nhận phòng khách sạn khu thương mại Namba/Shinsaibashi (Lưu trú liên tục 5 đêm)." },
+          { time: "17:30 - 21:30", title: "Shinsaibashi・Cảnh đêm biển hiệu neon Dotonbori・Chụp ảnh cùng Glico Running Man", desc: "Hòa mình vào khu mua sắm sầm uất và nhộn nhịp nhất Osaka, thưởng thức bánh xèo Okonomiyaki và bánh bạch tuộc Takoyaki nướng tại chỗ." }
+        ],
+        meals: "Matcha Nakamura Tokichi, Bánh xèo Mizuno Okonomiyaki, Bánh bạch tuộc Juhachiban, Xiên que chiên Kushikatsu Daruma nguyên bản",
+        transit: "Tuyến JR Nara + Tuyến chính Keihan / Tuyến tàu điện ngầm Osaka Midosuji",
+        tips: "Vào ngày di chuyển giữa các thành phố, bạn có thể tận dụng tủ khóa ga hoặc dịch vụ gửi hành lý trực tiếp của khách sạn để được thảnh thơi nhẹ nhàng."
+      },
+      {
+        dayNum: 6,
+        dateStr: "06/10 T3",
+        fullDate: "06/10/2026 (Thứ Ba)",
+        city: "USJ",
+        cityClass: "usj",
+        title: "Ngày 6: Vui chơi trọn ngày tại Universal Studios Japan (USJ) 🌟",
+        timeline: [
+          { time: "07:00 - 08:00", title: "Khởi hành đến sớm xếp hàng trước cổng USJ", desc: "Universal Studios thường mở cửa sớm 30-45 phút so với giờ niêm yết, hãy đến sớm để giành đợt vào cổng đầu tiên." },
+          { time: "08:30 - 12:00", title: "Super Nintendo World (Mario Kart, Khu vực Donkey Kong mới)", desc: "Đeo Vòng tay Năng lượng đập gạch lấy xu, thử thách Đua xe Lâu đài Bowser và Tàu lượn mỏ cuồng nhiệt Donkey Kong mở rộng hoàn toàn mới!" },
+          { time: "12:30 - 14:00", title: "Bữa trưa tinh tế chủ đề Nấm tại Kinopio's Cafe", desc: "Thưởng thức Bát Pizza Siêu Nấm, Cơm Ngôi Sao Vô Địch, Tráng miệng Tiramisu Khối Gạch và chụp ảnh check-in." },
+          { time: "14:00 - 17:30", title: "Thế giới phép thuật Harry Potter・Công viên Minion・The Flying Dinosaur", desc: "Uống Bia Bơ mát lạnh, trải nghiệm chuyến bay 4K Hành trình Cấm kỵ, thử thách Tàu lượn khủng long bay cực đã." },
+          { time: "18:30 - 21:00", title: "Cảnh đêm Lâu đài Hogwarts xinh đẹp・Mua sắm đồ lưu niệm・Quay về", desc: "Chụp ảnh lưu niệm dưới cảnh đêm của Lâu đài Hogwarts, mua đầy đủ xô bắp rang bơ phiên bản giới hạn và quà lưu niệm." }
+        ],
+        meals: "Kinopio's Cafe, Bia bơ Three Broomsticks, Xô bắp rang bơ Minion",
+        transit: "Tuyến JR Osaka Loop ➔ Đổi sang tuyến JR Yumesaki tại Nishikujo ➔ Ga Universal City",
+        tips: "Lượng khách vào thứ Ba thường ít hơn! Nhất định phải mua trực tuyến Express Pass trước ngày vào cổng 2 tháng."
+      },
+      {
+        dayNum: 7,
+        dateStr: "07/10 T4",
+        fullDate: "07/10/2026 (Thứ Tư)",
+        city: "Osaka",
+        cityClass: "osaka",
+        title: "Ngày 7: Lâu đài Osaka・Khu Shinsekai・Cảnh đêm Umeda",
+        timeline: [
+          { time: "09:30 - 12:00", title: "Công viên Lâu đài Osaka・Lên Tháp Tenshukaku ngắm toàn cảnh thành phố", desc: "Lên Tháp Tenshukaku thưởng ngoạn toàn cảnh thành phố Osaka hùng vĩ, tham quan triển lãm hiện vật lịch sử thời Chiến Quốc và Toyotomi Hideyoshi." },
+          { time: "12:30 - 15:30", title: "Khu thương mại Shinsekai・Trải nghiệm Cầu trượt Tsutenkaku・Ăn xiên que chiên Kushikatsu nguyên bản", desc: "Trải nghiệm phong cách hoài cổ thời kỳ Showa đậm đà, chơi cầu trượt Tower Slider, thưởng thức xiên que chiên Kushikatsu giòn thơm nguyên bản." },
+          { time: "16:30 - 18:30", title: "Mua sắm tại khu thương mại lớn Umeda (Grand Front / Bách hóa Hankyu)", desc: "Tận hưởng trung tâm mua sắm cốt lõi lớn nhất Kansai, mua quà lưu niệm tinh tế và các sản phẩm phong cách sống Nhật Bản." },
+          { time: "18:30 - 21:00", title: "Vườn treo Tòa nhà Umeda Sky・Thưởng thức cảnh đêm triệu đô 360 độ", desc: "Lên đài quan sát ngoài trời, thu trọn đường chân trời phồn hoa của Osaka vào tầm mắt, ăn tối tại nhà hàng Okonomiyaki danh tiếng." }
+        ],
+        meals: "Xiên que chiên Yaekatsu / Xiên que chiên Kushikatsu Daruma nguyên bản, Bánh xèo Kiji Okonomiyaki (Chi nhánh Umeda Sky)",
+        transit: "Vé một ngày Tàu điện ngầm Osaka Metro",
+        tips: "Thời điểm Vườn treo đẹp nhất là từ lúc hoàng hôn đến cảnh đêm, khuyên bạn nên lên đỉnh sớm để giữ chỗ."
+      },
+      {
+        dayNum: 8,
+        dateStr: "08/10 T5",
+        fullDate: "08/10/2026 (Thứ Năm)",
+        city: "Ngoại ô Nara",
+        cityClass: "osaka",
+        title: "Ngày 8: Dạo chơi cố đô Nara・Đại Phật Todai-ji & Chơi đùa với hươu",
+        timeline: [
+          { time: "09:00 - 10:00", title: "Đi tàu Kintetsu Rapid Express (Osaka Namba ➔ Kintetsu Nara)", desc: "Khoảng 35~40 phút đi thẳng đến Nara, ra khỏi ga đi bộ là đến ngay phố mua sắm và Công viên Nara." },
+          { time: "10:00 - 12:30", title: "Cho hươu ăn tại Công viên Nara・Công trình kiến trúc gỗ lớn nhất thế giới 'Chùa Todai-ji'", desc: "Mua bánh quy hươu (Shika Senbei) và tương tác chụp ảnh với những chú hươu thân thiện, chiêm ngưỡng Điện Đại Phật Rushana hùng vĩ, chấn động." },
+          { time: "13:00 - 14:30", title: "Ăn trưa ở phố cổ Naramachi・Mochi giã tay Nakatanidou", desc: "Thưởng thức cơm niêu Kamameshi Shizuka 7 vị, xem Nakatanidou giã bánh Mochi tốc độ cao và nếm thử bánh Mochi ngải cứu làm tại chỗ." },
+          { time: "14:30 - 16:30", title: "Đền Kasuga Taisha・Tản bộ rừng tuyết tùng cổ Vườn Bách thảo Manyo", desc: "Tản bộ giữa rừng tuyết tùng cổ thụ xanh tươi và 3.000 chiếc đèn lồng đá, cảm nhận bầu không khí thanh tịnh của cố đô." },
+          { time: "18:00 - 20:30", title: "Trở về Osaka Namba・Bữa tiệc thịt nướng bò Quốc sản cao cấp", desc: "Tự thưởng cho bản thân sau một ngày dài đi bộ bằng cách tận hưởng buffet thịt nướng chất lượng cao tan chảy trong miệng với nhiều vân mỡ." }
+        ],
+        meals: "Cơm niêu Shizuka Kamameshi, Bánh Mochi giã tay Nakatanidou, Buffet Thịt nướng bò Quốc sản Namba (Aburiya)",
+        transit: "Vé một chiều tàu điện Kintetsu / Vé một ngày Nara - Ikaruga",
+        tips: "Khi cho hươu ăn, vui lòng chia nhỏ bánh quy trên tay, chú ý túi giấy và balo mang theo để tránh bị hươu cắn."
+      },
+      {
+        dayNum: 9,
+        dateStr: "09/10 T6",
+        fullDate: "09/10/2026 (Thứ Sáu)",
+        city: "Osaka",
+        cityClass: "osaka",
+        title: "Ngày 9: Thủy cung/Nakazakicho・Chợ Kuromon・Mua sắm phố Orange",
+        timeline: [
+          { time: "09:30 - 12:30", title: "Thủy cung Osaka Kaiyukan (Cá mập voi) hoặc Phố cà phê hoài cổ Nakazakicho", desc: "Khám phá thủy cung đẳng cấp thế giới ngắm nhìn cá mập voi khổng lồ, hoặc tản bộ Nakazakicho thưởng thức cà phê pha tay và cửa hàng đồ chọn lọc." },
+          { time: "12:30 - 15:00", title: "Bữa trưa hải sản tươi sống chợ Kuromon & Đền Namba Yasaka", desc: "Thưởng thức cá ngừ vây xanh, nhím biển và bò Wagyu nướng, viếng thăm sân khấu hình đầu sư tử khổng lồ cầu may mắn." },
+          { time: "15:30 - 18:30", title: "Tản bộ ngắm đồ thời trang phố Orange Street Minami Horie", desc: "Khu trung tâm xu hướng thời trang tập trung Supreme, BAPE, cửa hàng quần áo secondhand và các sản phẩm phong cách retro kiểu Mỹ." },
+          { time: "19:00 - 22:00", title: "Bổ sung hàng chót tại Don Quijote/Daikoku・Đóng gói hành lý", desc: "Thực hiện đợt mua sắm mỹ phẩm miễn thuế và đồ ăn vặt cuối cùng, về khách sạn cân và sắp xếp đầy ắp chiến lợi phẩm của 10 ngày." }
+        ],
+        meals: "Hải sản Kuromon Sanpei, Bánh crepe trái cây ngàn lớp HARBS, Mì Ramen Ichiran",
+        transit: "Tuyến Tàu điện ngầm Osaka Metro Midosuji / Tuyến Chuo",
+        tips: "Túi niêm phong hàng miễn thuế không được mở trong nước. Hàng hóa dạng lỏng bắt buộc phải để trong hành lý ký gửi."
+      },
+      {
+        dayNum: 10,
+        dateStr: "10/10 T7",
+        fullDate: "10/10/2026 (Thứ Bảy)",
+        city: "Về ĐL",
+        cityClass: "osaka",
+        title: "Ngày 10: Đầy ắp kỷ niệm・Xuất cảnh tại Sân bay Kansai về Đài Loan",
+        timeline: [
+          { time: "09:30 - 10:30", title: "Trả phòng khách sạn・Đến Ga Nankai Namba", desc: "Thong thả thưởng thức bữa sáng rồi trả phòng, đi bộ đến Ga Nankai Namba đón tàu tốc hành Rapi:t." },
+          { time: "10:30 - 11:15", title: "Đi tàu Nankai Electric Railway tốc hành Rapi:t chạy thẳng đến Sân bay Kansai", desc: "Khoảng 38 phút đi thẳng đến Nhà ga số 1 (T1) Sân bay Quốc tế Kansai, toa xe thoải mái và có giá để hành lý." },
+          { time: "11:30 - 13:30", title: "Check-in ký gửi tại quầy China Airlines・Mua sắm cuối cùng tại cửa hàng miễn thuế sân bay", desc: "Hoàn tất ký gửi hành lý 2.5 giờ trước khi cất cánh, mua quà lưu niệm như Shiroi Koibito, Socola tươi Royce." },
+          { time: "14:00 - 16:00", title: "Đón chuyến bay China Airlines CI153 cất cánh (A350)・Hạ cánh an toàn tại TPE T2", desc: "Về đến Đài Loan an toàn, kết thúc chuyến du lịch mùa thu Kansai 10 ngày tuyệt vời và khó quên!" }
+        ],
+        meals: "Khu ẩm thực xuất cảnh sân bay Kansai, Mì Ramen Kamukura, Bánh kẹo quà lưu niệm giới hạn tại sân bay",
+        transit: "Tàu tốc hành Nankai Rapi:t ghế đặt trước",
+        tips: "Chuyến bay CI153 của China Airlines theo lịch trình cất cánh lúc 14:00, bắt buộc phải có mặt tại cửa lên máy bay trước 13:20."
+      }
+    ],
+    printDoc: {
+      title: "TRAVEL ITINERARY / LỊCH TRÌNH DU LỊCH",
+      subtitle: "Japan Kansai Trip (Kyoto & Osaka 10 Days 9 Nights)",
+      infoNameLabel: "Hành khách (Traveler):",
+      infoNameVal: "Chuang Shih-hsien & Partner",
+      infoDateLabel: "Ngày đi (Dates):",
+      infoDateVal: "01/10/2026 – 10/10/2026 (10 Days 9 Nights)",
+      infoFlightLabel: "Chuyến bay (Flights):",
+      infoFlightVal: "Out: CI156 (01/10 08:15 TPE ➔ 12:00 KIX) | In: CI153 (10/10 14:00 KIX ➔ 16:00 TPE)",
+      infoPurposeLabel: "Mục đích (Purpose):",
+      infoPurposeVal: "Du lịch (Sightseeing / Tourism)",
+      colDate: "Ngày (Date)",
+      colCity: "Khu vực (Area)",
+      colPlan: "Lịch trình & Hoạt động (Planned Schedule & Activities)",
+      colHotel: "Chỗ ở (Accommodation)",
+      printRows: [
+        { date: "01/10 (Thu)", city: "Osaka (KIX) ➔ Kyoto", plan: "Flight CI156 (08:15-12:00) to KIX. Haruka Express to Kyoto. Hotel check-in. Pontocho & Kamo River evening walk.", hotel: "Kyoto Hotel\n(Shijo Karasuma / Kawaramachi Area)\nTel: +81-75-xxx-xxxx" },
+        { date: "02/10 (Fri)", city: "Kyoto", plan: "Kiyomizu-dera Temple, Sannenzaka & Ninenzaka, Yasaka Shrine, Gion & Hanamikoji street, Shirakawa night view.", hotel: "Kyoto Hotel\n(Same as above)" },
+        { date: "03/10 (Sat)", city: "Kyoto", plan: "Fushimi Inari Taisha (Thousand Torii gates), Nishiki Market food tour, Kinkaku-ji (Golden Pavilion), ShinPuhKan.", hotel: "Kyoto Hotel\n(Same as above)" },
+        { date: "04/10 (Sun)", city: "Kyoto (Arashiyama)", plan: "Sagano Romantic Train, Arashiyama Bamboo Grove, Tenryu-ji Temple, Togetsukyo Bridge, % Arabica Cafe.", hotel: "Kyoto Hotel\n(Same as above)" },
+        { date: "05/10 (Mon)", city: "Kyoto ➔ Osaka", plan: "Uji sightseeing (Byodo-in Temple, Matcha). Transfer to Osaka hotel check-in. Dotonbori & Shinsaibashi.", hotel: "Osaka Hotel\n(Namba / Shinsaibashi / Umeda Area)\nTel: +81-6-xxx-xxxx" },
+        { date: "06/10 (Tue)", city: "Osaka (USJ)", plan: "Universal Studios Japan (USJ) full-day visit (Super Nintendo World, Donkey Kong, Harry Potter, Jurassic Park).", hotel: "Osaka Hotel\n(Same as above)" },
+        { date: "07/10 (Wed)", city: "Osaka", plan: "Osaka Castle Park & Main Keep, Shinsekai & Tsutenkaku Tower Slider, Umeda Sky Building Observatory night view.", hotel: "Osaka Hotel\n(Same as above)" },
+        { date: "08/10 (Thu)", city: "Nara (Day trip)", plan: "Day trip to Nara: Nara Deer Park, Todai-ji Temple (Great Buddha), Kasuga Taisha Shrine. Return to Osaka for Yakiniku.", hotel: "Osaka Hotel\n(Same as above)" },
+        { date: "09/10 (Fri)", city: "Osaka", plan: "Osaka Aquarium Kaiyukan / Nakazakicho retro cafes, Kuromon Market, Orange Street shopping, packing luggage.", hotel: "Osaka Hotel\n(Same as above)" },
+        { date: "10/10 (Sat)", city: "Osaka ➔ TPE", plan: "Hotel check-out. Nankai Rapi:t Express to KIX. Flight CI153 (14:00-16:00) return to Taiwan (TPE).", hotel: "Departure Flight CI153\n(Return to Taiwan)" }
+      ],
+      footerNote: "* Lịch trình này được chuẩn bị cho mục đích xin visa, qua cổng hải quan và lên kế hoạch cá nhân. Thông tin chuyến bay và khách sạn có thể thay đổi theo xác nhận đặt chỗ thực tế."
     }
   }
 };
